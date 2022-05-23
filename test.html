@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+ 
+
+    #container {
+      perspective: 30px;
+    }
+
+    #inner {
+      transition: transform 0.5s;
+      -webkit-transition: transform 0.5s;
+      box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div id="inner">
+      <div class="demo-img">
+        <div class="demo-overlay">
+          <img src="./images/slider1-img3.png" id="svg" alt="">
+        
+        </div>
+      </div>
+    </div>
+  </div
+ </body>
+  <script>
+   
+    (function () {
+      // Init
+      var container = document.getElementById("container"),
+        inner = document.getElementById("inner");
+
+      // Mouse
+      var mouse = {
+        _x: 0,
+        _y: 0,
+        x: 0,
+        y: 0,
+        updatePosition: function (event) {
+          var e = event || window.event;
+          this.x = e.clientX - this._x;
+          this.y = (e.clientY - this._y) * -1;
+        },
+        setOrigin: function (e) {
+          this._x = e.offsetLeft + Math.floor(e.offsetWidth / 2);
+          this._y = e.offsetTop + Math.floor(e.offsetHeight / 2);
+        },
+        show: function () {
+          return "(" + this.x + ", " + this.y + ")";
+        }
+      };
+
+      // Track the mouse position relative to the center of the container.
+      mouse.setOrigin(container);
+
+      //----------------------------------------------------
+
+      var counter = 0;
+      var refreshRate = 10;
+      var isTimeToUpdate = function () {
+        return counter++ % refreshRate === 0;
+      };
+
+      //----------------------------------------------------
+
+      var onMouseEnterHandler = function (event) {
+        update(event);
+      };
+
+      var onMouseLeaveHandler = function () {
+        inner.style = "";
+      };
+
+      var onMouseMoveHandler = function (event) {
+        if (isTimeToUpdate()) {
+          update(event);
+        }
+      };
+
+      //----------------------------------------------------
+
+      var update = function (event) {
+        mouse.updatePosition(event);
+        updateTransformStyle(
+          (mouse.y / inner.offsetHeight / 2).toFixed(2),
+          (mouse.x / inner.offsetWidth / 2).toFixed(2)
+        );
+      };
+
+      var updateTransformStyle = function (x, y) {
+        var style = "rotateX(" + x + "deg) rotateY(" + y + "deg)";
+        inner.style.transform = style;
+        inner.style.webkitTransform = style;
+        inner.style.mozTranform = style;
+        inner.style.msTransform = style;
+        inner.style.oTransform = style;
+      };
+
+      //--------------------------------------------------------
+
+      container.onmousemove = onMouseMoveHandler;
+      container.onmouseleave = onMouseLeaveHandler;
+      container.onmouseenter = onMouseEnterHandler;
+    })();
+
+  </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="">
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="owl-carousel owl-theme">
+        <div class="item"><h4>1</h4></div>
+        <div class="item"><h4>2</h4></div>
+        <div class="item"><h4>3</h4></div>
+        <div class="item"><h4>4</h4></div>
+        <div class="item"><h4>5</h4></div>
+        <div class="item"><h4>6</h4></div>
+        <div class="item"><h4>7</h4></div>
+        <div class="item"><h4>8</h4></div>
+        <div class="item"><h4>9</h4></div>
+        <div class="item"><h4>10</h4></div>
+        <div class="item"><h4>11</h4></div>
+        <div class="item"><h4>12</h4></div>
+    </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  
+  $(document).ready(function(){
+  $(".owl-carousel").owlCarousel();
+});
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:3,
+            nav:false
+        },
+        1000:{
+            items:5,
+            nav:true,
+            loop:false
+        }
+    }
+})
+</script>
+</div>
+</html>

@@ -1,0 +1,155 @@
+/* patua one google font  */
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
+:root {
+    --patua: 'Patua One', cursive;
+    --greenTheme: #1ab293;
+    --textWhiteColor: #fff;
+    --onHoverTextColor: #000;
+    --letterSpacing: .5px;
+    --BoxShaow: 0px 0px 6px 1px lightgrey;
+    --allcapitalLetter: uppercase;
+    /* --white: #ffffff; */
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: lightgray;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #1ab293;
+}
+
+* {
+    font-family: var(--patua);
+    box-sizing: border-box;
+
+}
+
+/* shadow css  */
+.shadow {
+    box-shadow: var(--BoxShaow);
+}
+
+
+.menu1 {
+    position: sticky;
+    top: 0 !important;
+    width: 100%;
+    background-color: var(--textWhiteColor);
+    z-index: 1;
+}
+
+/* upperHeader green color header menu  */
+.upperHeader {
+    border-bottom-left-radius: 52px !important;
+    background-color: var(--greenTheme);
+    color: var(--textWhiteColor);
+    letter-spacing: var(--letterSpacing);
+}
+
+.contactNumber:hover,
+.contactEmail:hover,
+.login:hover {
+    color: var(--onHoverTextColor);
+}
+
+/* lower header menu  */
+
+.menuList li a {
+    color: #000;
+    text-decoration: none;
+}
+
+.menuList li a:hover {
+    color: var(--greenTheme);
+}
+
+/* index.html  */
+.bodyContainer {
+    height: calc(100vh - 80px);
+    overflow: hidden;
+}
+
+/* main carousel   */
+
+.s1i1 {
+    top: 0;
+    left: 0;
+}
+
+.s1i2 {
+    top: 0%;
+    right: 0;
+}
+
+.s1i3 {
+    top: 34px;
+    width: 43%;
+    right: 6%;
+}
+
+.s1i4 {
+    width: 29%;
+    left: 17.5%;
+    top: 124px;
+    transition-duration: 5s;
+}
+ /* first categry product causel  */
+ .categryName:hover{
+     color: var(--onHoverTextColor);
+ }
+ .categryName{
+    color: var(--greenTheme);
+}
+
+.prenavigate, .postnavigate{
+    
+    border: 1px solid;
+    padding: 0px 11px !important;
+    border-radius: 3px;
+    color: #1ab293;
+    background: transparent;
+    /* font-weight: 400; */
+    line-height: 32px;
+    margin-bottom: 0px !important;
+    /* padding-bottom: 4px !important; */
+}
+.prenavigate:focus-visible, .postnavigate:focus-visible{
+    border: 2px solid var(--greenTheme);
+    outline: none !important;
+}
+.owl-carousel button .next-slide{
+    position: absolute;
+    top: 25%;
+    background: white;
+    right: 1%;
+}
+.owl-carousel button .next-slide:hover, .owl-carousel button .prev-slide:hover{
+    background-color: var(--greenTheme);
+    color: var(--textWhiteColor);
+    border: var(--onHoverTextColor);
+}
+.owl-carousel button .prev-slide{
+    position: absolute;
+    top: 25%;
+    background: white;
+    left: 1%;
+}
+
+.productHeading, .productdiscrib{
+    font-family: var(--patua);
+}
+/* LatestProduct */
