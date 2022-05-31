@@ -128,10 +128,10 @@
 <!-- product heading -->
 
 <h1 class="text-center productHeading">Latest Products</h1>
-<h6 class="productdiscrib w-75 mx-auto text-center mb-3 ">Lorem ipsum  labore ad reprehenderit omnis esse odit voluptates sed perspiciatis quaerat, ipsam rem nam deleniti. Magnam non minus, ullam commodi architecto aliquid fuga, in similique eos atque ratione ex beatae dolores, illum quidem alias saepe. Veritatis, ipsam delectus? Id fugiat tenetur, incidunt architecto rem mollitia deserunt?</h6>
+<h6 class="productdiscrib w-75 mx-auto text-center text-secondary mb-3 ">Lorem ipsum  labore ad reprehenderit omnis esse odit voluptates sed perspiciatis quaerat, ipsam rem nam deleniti. Magnam non minus, ullam commodi architecto aliquid fuga, in similique eos atque ratione ex beatae dolores, illum quidem alias saepe. Veritatis, ipsam delectus? Id fugiat tenetur, incidunt architecto rem mollitia deserunt?</h6>
  
 <!-- products on tab system  -->
-<ul class="nav nav-tabs" id="LatestProduct" role="tablist">
+<ul class="d-flex justify-content-center nav nav-tabs text-center" id="LatestProduct" role="tablist">
     <li class="nav-item" role="presentation">
       <a class="nav-link active" id="Newest_tab" data-toggle="tab" href="#Newest_product" role="tab" aria-controls="Newest_product" aria-selected="true">Newest</a>
     </li>
@@ -143,7 +143,26 @@
     </li>
   </ul>
   <div class="tab-content" id="TabProductContent">
-    <div class="tab-pane fade show active" id="Newest_product" role="tabpanel" aria-labelledby="Newest_tab">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+    <div class="tab-pane fade show active" id="Newest_product" role="tabpanel" aria-labelledby="Newest_tab">
+        <div class="row mx-0">
+            <div class="col-md-3 px-0 border bg-danger">
+                <img src="./images/2-watermelon.jpg" class="border border-danger w-100" alt="">
+                <h6 class="text-center">Fresho Watermelon</h6>
+                <h6 class="text-center"><span class="" style="text-decoration:line-through;"><i class="fa-solid fa-indian-rupee-sign"></i><p>39 KG</p></span></h6>
+                <!-- <h6></h6> -->
+            </div>
+            <div class="col-md-3 px-0 border bg-danger">
+                <img src="./images/2-watermelon.jpg" class="border border-danger w-100" alt="">
+            </div>
+            <div class="col-md-3 px-0 border bg-danger">
+                <img src="./images/2-watermelon.jpg" class="border border-danger w-100" alt="">
+            </div>
+            <div class="col-md-3 px-0 border bg-danger">
+                <img src="./images/2-watermelon.jpg" class="border border-danger w-100" alt="">
+            </div>
+        </div>
+        
+    </div>
     <div class="tab-pane fade" id="Best_sale-product" role="tabpanel" aria-labelledby="Best_sale-tab">.bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</div>
     <div class="tab-pane fade" id="on_sale_product" role="tabpanel" aria-labelledby="On_sale-tab">.xcccccccccccccccccccccccccccccc..</div>
   </div>

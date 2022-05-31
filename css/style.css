@@ -153,3 +153,16 @@
     font-family: var(--patua);
 }
 /* LatestProduct */
+/* .nav-item .nav-link.show.active{
+    border-top:3px solid var(--greenTheme);
+    border: 1px transparent;
+    color: var(--greenTheme);
+} */
+.nav-link{
+    color: #1ab293;
+    border: 1px solid transparent !important;
+}
+.nav-link:hover{
+    color: #000;
+    border: 1px solid transparent !important;
+}
