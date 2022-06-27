@@ -10,8 +10,13 @@
     --textWhiteColor: #fff;
     --onHoverTextColor: #000;
     --letterSpacing: .5px;
-    --BoxShaow: 0px 0px 6px 1px lightgrey;
+    --BoxShaow: 1px 1px 7px 0px #c0c0c0;
     --allcapitalLetter: uppercase;
+    --textualHeading: 1rem; /* or write in h6 tag */
+    --LastHeading: 1.25rem; /* or write in h5 tag */
+    --SecondryHeading: 1.5rem; /* or write in h4 tag */
+    
+
     /* --white: #ffffff; */
 }
 ul{
@@ -19,12 +24,12 @@ ul{
     padding-left: 3rem;
 }
 .box_shadow_with_padding{
-    box-shadow: 1px 1px 7px 0px #c0c0c0;
+    box-shadow: var(--BoxShaow);
     border-radius: 8px;
     padding: 1rem 1.5rem;
 }
 .box_shadow{
-    box-shadow: 1px 1px 7px 0px #c0c0c0;
+    box-shadow: var(--BoxShaow);
     border-radius: 8px;
 }
 .green_color{
@@ -36,14 +41,30 @@ ul{
 .green_bgcolor{
     background-color: var(--greenTheme);
 }
+.owl-nav{
+    height: 0px;
+}
+.owl-dots{
+    display: none;
+}
+.product_list{
+    width: 95%;
+    margin: auto;
+}
+.row{
+    margin: auto 0px !important;
+}
 /* ============================================= ./ common css for all pages  ========================================================================== */
 /* =============================================  index page css  ========================================================================== */
 
 .best_SellingofferCard{
     background-image: url(../images/banners/carrot_offer.jpg);
-    height: 100px;
+    height: 100%;
     background-size: cover;
+    background-position: bottom;
     background-repeat: no-repeat;
+    border-radius: 8px;
+    filter: brightness(0.8);
 }
 .owl-carousel button .prev-slide{
     position: absolute;
