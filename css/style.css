@@ -1,9 +1,12 @@
+/* =============================================  common css for all pages  ========================================================================== */
+
 /* patua one google font  */
 @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
 
 :root {
     --patua: 'Patua One', cursive;
     --greenTheme: #1ab293;
+    --gray_color:#707070;
     --textWhiteColor: #fff;
     --onHoverTextColor: #000;
     --letterSpacing: .5px;
@@ -11,6 +14,54 @@
     --allcapitalLetter: uppercase;
     /* --white: #ffffff; */
 }
+ul{
+    list-style: none;
+    padding-left: 3rem;
+}
+.box_shadow_with_padding{
+    box-shadow: 1px 1px 7px 0px #c0c0c0;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+}
+.box_shadow{
+    box-shadow: 1px 1px 7px 0px #c0c0c0;
+    border-radius: 8px;
+}
+.green_color{
+    color: var(--greenTheme);
+}
+.gray_color{
+    color: var(--gray_color);
+}
+.green_bgcolor{
+    background-color: var(--greenTheme);
+}
+/* ============================================= ./ common css for all pages  ========================================================================== */
+/* =============================================  index page css  ========================================================================== */
+
+.best_SellingofferCard{
+    background-image: url(../images/banners/carrot_offer.jpg);
+    height: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.owl-carousel button .prev-slide{
+    position: absolute;
+    top: -14%;
+    background: white;
+    right: 11%;
+    height: 25px;
+}
+.owl-carousel button .next-slide{
+    position: absolute;
+    top: -14%;
+    background: white;
+    right: 0%;
+    height: 25px;
+}
+
+/* ============================================= ./ index page css  ========================================================================== */
+
 
 /* width */
 ::-webkit-scrollbar {
@@ -131,22 +182,11 @@
     border: 2px solid var(--greenTheme);
     outline: none !important;
 }
-.owl-carousel button .next-slide{
-    position: absolute;
-    top: 25%;
-    background: white;
-    right: 1%;
-}
+
 .owl-carousel button .next-slide:hover, .owl-carousel button .prev-slide:hover{
     background-color: var(--greenTheme);
     color: var(--textWhiteColor);
     border: var(--onHoverTextColor);
-}
-.owl-carousel button .prev-slide{
-    position: absolute;
-    top: 25%;
-    background: white;
-    left: 1%;
 }
 
 .productHeading, .productdiscrib{
