@@ -31,6 +31,10 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
 		integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- jquery cdn link  -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+		integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </head>
 
@@ -55,7 +59,7 @@
 	</div>
 </div>
 <!-- best selling product  -->
-<div class="row mb-5 pb-5">
+<div class="row mb-4">
 	<!-- offer banner  -->
 	<div class="col-md-4  ">
 		<div class="best_SellingofferCard d-flex flex-column justify-content-end pb-4 pl-3 ">
@@ -68,9 +72,9 @@
 	<div class="col-md-4  ">
 		<div class="box_shadow_with_padding">
 			<h5>Best Selling Vegetables</h5>
-			<div class="owl-carousel owl-theme mt-4">
-				<div class="item text-center">
-					<li class="align-items-center d-flex box_shadow mb-3 product_list">
+			<div class="owl-carousel bestSelling owl-theme mt-4" id="">
+				<div class="item text-center best_Selling_vegetables_1">
+					<!-- <li class="align-items-center d-flex box_shadow mb-3 product_list">
 						<img src="./images/vegetables/cat-img1.jpg" alt="" class=""
 							style=" width: 27%; max-width: 115px;">
 						<div class="d-flex flex-column ml-3">
@@ -82,361 +86,151 @@
 											class="fa-solid fa-indian-rupee-sign"></i> 20</span></span>
 							</p>
 						</div>
-					</li>
-					<li class="align-items-center d-flex box_shadow mb-3 product_list">
-						<img src="./images/vegetables/cat-img1.jpg" alt="" class=""
-							style=" width: 27%; max-width: 115px;">
-						<div class="d-flex flex-column ml-3">
-							<h6>Fresh Watermelon</h6>
-							<p class="mb-0">
-								<span class="mr-2 gray_color"><span style="text-decoration: line-through;"
-										class="text-muted"><i class="fa-solid fa-indian-rupee-sign"></i> 30</span>
-								</span><span class="ml-2"><span class="green_color"><i
-											class="fa-solid fa-indian-rupee-sign"></i> 20</span></span>
-							</p>
-						</div>
-					</li>
-					<li class="align-items-center d-flex box_shadow mb-3 product_list">
-						<img src="./images/vegetables/cat-img1.jpg" alt="" class=""
-							style=" width: 27%; max-width: 115px;">
-						<div class="d-flex flex-column ml-3">
-							<h6>Fresh Watermelon</h6>
-							<p class="mb-0">
-								<span class="mr-2 gray_color"><span style="text-decoration: line-through;"
-										class="text-muted"><i class="fa-solid fa-indian-rupee-sign"></i> 30</span>
-								</span><span class="ml-2"><span class="green_color"><i
-											class="fa-solid fa-indian-rupee-sign"></i> 20</span></span>
-							</p>
-						</div>
-					</li>
-					<li class="align-items-center d-flex box_shadow mb-3 product_list">
-						<img src="./images/vegetables/cat-img1.jpg" alt="" class=""
-							style=" width: 27%; max-width: 115px;">
-						<div class="d-flex flex-column ml-3">
-							<h6>Fresh Watermelon</h6>
-							<p class="mb-0">
-								<span class="mr-2 gray_color"><span style="text-decoration: line-through;"
-										class="text-muted"><i class="fa-solid fa-indian-rupee-sign"></i> 30</span>
-								</span><span class="ml-2"><span class="green_color"><i
-											class="fa-solid fa-indian-rupee-sign"></i> 20</span></span>
-							</p>
-						</div>
-					</li>
+					</li>  -->
 				</div>
-				<div class="item text-center">
-					<li class="align-items-center d-flex box_shadow mb-3 product_list">
-						<img src="./images/vegetables/cat-img1.jpg" alt="" class=""
-							style=" width: 27%; max-width: 115px;">
-						<div class="d-flex flex-column ml-3">
-							<h6>Fresh Watermelon</h6>
-							<p class="mb-0">
-								<span class="mr-2 gray_color"><span style="text-decoration: line-through;"
-										class="text-muted"><i class="fa-solid fa-indian-rupee-sign"></i> 30</span>
-								</span><span class="ml-2"><span class="green_color"><i
-											class="fa-solid fa-indian-rupee-sign"></i> 20</span></span>
-							</p>
-						</div>
-					</li>
-					<li class="align-items-center d-flex box_shadow mb-3 product_list">
-						<img src="./images/vegetables/cat-img1.jpg" alt="" class=""
-							style=" width: 27%; max-width: 115px;">
-						<div class="d-flex flex-column ml-3">
-							<h6>Fresh Watermelon</h6>
-							<p class="mb-0">
-								<span class="mr-2 gray_color"><span style="text-decoration: line-through;"
-										class="text-muted"><i class="fa-solid fa-indian-rupee-sign"></i> 30</span>
-								</span><span class="ml-2"><span class="green_color"><i
-											class="fa-solid fa-indian-rupee-sign"></i> 20</span></span>
-							</p>
-						</div>
-					</li>
-					<li class="align-items-center d-flex box_shadow mb-3 product_list">
-						<img src="./images/vegetables/cat-img1.jpg" alt="" class=""
-							style=" width: 27%; max-width: 115px;">
-						<div class="d-flex flex-column ml-3">
-							<h6>Fresh Watermelon</h6>
-							<p class="mb-0">
-								<span class="mr-2 gray_color"><span style="text-decoration: line-through;"
-										class="text-muted"><i class="fa-solid fa-indian-rupee-sign"></i> 30</span>
-								</span><span class="ml-2"><span class="green_color"><i
-											class="fa-solid fa-indian-rupee-sign"></i> 20</span></span>
-							</p>
-						</div>
-					</li>
-					<li class="align-items-center d-flex box_shadow mb-3 product_list">
-						<img src="./images/vegetables/cat-img1.jpg" alt="" class=""
-							style=" width: 27%; max-width: 115px;">
-						<div class="d-flex flex-column ml-3">
-							<h6>Fresh Watermelon</h6>
-							<p class="mb-0">
-								<span class="mr-2 gray_color"><span style="text-decoration: line-through;"
-										class="text-muted"><i class="fa-solid fa-indian-rupee-sign"></i> 30</span>
-								</span><span class="ml-2"><span class="green_color"><i
-											class="fa-solid fa-indian-rupee-sign"></i> 20</span></span>
-							</p>
-						</div>
-					</li>
-				</div>
-				<!-- <div class="item text-center">
-					<img src="./images/cat-img3.jpg" alt="">
-					<h4 class="categryName">Green Vegetables</h4>
-				</div>
-				<div class="item text-center">
-					<img src="./images/cat-img4.jpg" alt="">
-					<h4 class="categryName">organic Vegetables</h4>
-				</div>
-				<div class="item text-center">
-					<img src="./images/cat-img5.jpg" alt="">
-					<h4 class="categryName">Cut & Sprouts</h4>
-				</div> -->
-
+				<div class="item text-center  best_Selling_vegetables_2"></div>
 			</div>
-			<ul class="mb-0 pl-1">
-
-				<!-- <li class="align-items-center d-flex box_shadow mb-3">
-					<img src="./images/vegetables/cat-img1.jpg" alt="" class="" style=" width: 27%; max-width: 115px;">
-					<div class="d-flex flex-column ml-3">
-						<h6>Fresh Watermelon</h6>
-						<p class="mb-0">
-							<span class="mr-2 gray_color"><span style="text-decoration: line-through;" class="text-muted"><i class="fa-solid fa-indian-rupee-sign"></i> 30</span>
-							</span><span class="ml-2"><span class="green_color"><i class="fa-solid fa-indian-rupee-sign"></i> 20</span></span>
-						</p>
-					</div>
-				</li>
-				<li class="align-items-center d-flex box_shadow mb-3">
-					<img src="./images/vegetables/cat-img1.jpg" alt="" class="" style=" width: 27%; max-width: 115px;">
-					<div class="d-flex flex-column ml-3">
-						<h6>Fresh Watermelon</h6>
-						<p class="mb-0">
-							<span class="mr-2 gray_color"><span style="text-decoration: line-through;" class="text-muted"><i class="fa-solid fa-indian-rupee-sign"></i> 30</span>
-							</span><span class="ml-2"><span class="green_color"><i class="fa-solid fa-indian-rupee-sign"></i> 20</span></span>
-						</p>
-					</div>
-				</li> -->
-			</ul>
 		</div>
-
 	</div>
 	<!-- best_Selling fruits cart -->
 
 	<div class="col-md-4  ">
 		<div class="box_shadow_with_padding">
 			<h5>Best Selling Fruits</h5>
-			<div class="owl-carousel owl-theme mt-4">
-				<div class="item text-center">
-					<li class="align-items-center d-flex box_shadow mb-3 product_list">
-						<img src="./images/vegetables/cat-img1.jpg" alt="" class=""
-							style=" width: 27%; max-width: 115px;">
-						<div class="d-flex flex-column ml-3">
-							<h6>Fresh Watermelon</h6>
-							<p class="mb-0">
-								<span class="mr-2 gray_color"><span style="text-decoration: line-through;"
-										class="text-muted"><i class="fa-solid fa-indian-rupee-sign"></i> 30</span>
-								</span><span class="ml-2"><span class="green_color"><i
-											class="fa-solid fa-indian-rupee-sign"></i> 20</span></span>
-							</p>
-						</div>
-					</li>
-					<li class="align-items-center d-flex box_shadow mb-3 product_list">
-						<img src="./images/vegetables/cat-img1.jpg" alt="" class=""
-							style=" width: 27%; max-width: 115px;">
-						<div class="d-flex flex-column ml-3">
-							<h6>Fresh Watermelon</h6>
-							<p class="mb-0">
-								<span class="mr-2 gray_color"><span style="text-decoration: line-through;"
-										class="text-muted"><i class="fa-solid fa-indian-rupee-sign"></i> 30</span>
-								</span><span class="ml-2"><span class="green_color"><i
-											class="fa-solid fa-indian-rupee-sign"></i> 20</span></span>
-							</p>
-						</div>
-					</li>
-					<li class="align-items-center d-flex box_shadow mb-3 product_list">
-						<img src="./images/vegetables/cat-img1.jpg" alt="" class=""
-							style=" width: 27%; max-width: 115px;">
-						<div class="d-flex flex-column ml-3">
-							<h6>Fresh Watermelon</h6>
-							<p class="mb-0">
-								<span class="mr-2 gray_color"><span style="text-decoration: line-through;"
-										class="text-muted"><i class="fa-solid fa-indian-rupee-sign"></i> 30</span>
-								</span><span class="ml-2"><span class="green_color"><i
-											class="fa-solid fa-indian-rupee-sign"></i> 20</span></span>
-							</p>
-						</div>
-					</li>
-					<li class="align-items-center d-flex box_shadow mb-3 product_list">
-						<img src="./images/vegetables/cat-img1.jpg" alt="" class=""
-							style=" width: 27%; max-width: 115px;">
-						<div class="d-flex flex-column ml-3">
-							<h6>Fresh Watermelon</h6>
-							<p class="mb-0">
-								<span class="mr-2 gray_color"><span style="text-decoration: line-through;"
-										class="text-muted"><i class="fa-solid fa-indian-rupee-sign"></i> 30</span>
-								</span><span class="ml-2"><span class="green_color"><i
-											class="fa-solid fa-indian-rupee-sign"></i> 20</span></span>
-							</p>
-						</div>
-					</li>
-				</div>
-				<div class="item text-center">
-					<li class="align-items-center d-flex box_shadow mb-3 product_list">
-						<img src="./images/vegetables/cat-img1.jpg" alt="" class=""
-							style=" width: 27%; max-width: 115px;">
-						<div class="d-flex flex-column ml-3">
-							<h6>Fresh Watermelon</h6>
-							<p class="mb-0">
-								<span class="mr-2 gray_color"><span style="text-decoration: line-through;"
-										class="text-muted"><i class="fa-solid fa-indian-rupee-sign"></i> 30</span>
-								</span><span class="ml-2"><span class="green_color"><i
-											class="fa-solid fa-indian-rupee-sign"></i> 20</span></span>
-							</p>
-						</div>
-					</li>
-					<li class="align-items-center d-flex box_shadow mb-3 product_list">
-						<img src="./images/vegetables/cat-img1.jpg" alt="" class=""
-							style=" width: 27%; max-width: 115px;">
-						<div class="d-flex flex-column ml-3">
-							<h6>Fresh Watermelon</h6>
-							<p class="mb-0">
-								<span class="mr-2 gray_color"><span style="text-decoration: line-through;"
-										class="text-muted"><i class="fa-solid fa-indian-rupee-sign"></i> 30</span>
-								</span><span class="ml-2"><span class="green_color"><i
-											class="fa-solid fa-indian-rupee-sign"></i> 20</span></span>
-							</p>
-						</div>
-					</li>
-					<li class="align-items-center d-flex box_shadow mb-3 product_list">
-						<img src="./images/vegetables/cat-img1.jpg" alt="" class=""
-							style=" width: 27%; max-width: 115px;">
-						<div class="d-flex flex-column ml-3">
-							<h6>Fresh Watermelon</h6>
-							<p class="mb-0">
-								<span class="mr-2 gray_color"><span style="text-decoration: line-through;"
-										class="text-muted"><i class="fa-solid fa-indian-rupee-sign"></i> 30</span>
-								</span><span class="ml-2"><span class="green_color"><i
-											class="fa-solid fa-indian-rupee-sign"></i> 20</span></span>
-							</p>
-						</div>
-					</li>
-					<li class="align-items-center d-flex box_shadow mb-3 product_list">
-						<img src="./images/vegetables/cat-img1.jpg" alt="" class=""
-							style=" width: 27%; max-width: 115px;">
-						<div class="d-flex flex-column ml-3">
-							<h6>Fresh Watermelon</h6>
-							<p class="mb-0">
-								<span class="mr-2 gray_color"><span style="text-decoration: line-through;"
-										class="text-muted"><i class="fa-solid fa-indian-rupee-sign"></i> 30</span>
-								</span><span class="ml-2"><span class="green_color"><i
-											class="fa-solid fa-indian-rupee-sign"></i> 20</span></span>
-							</p>
-						</div>
-					</li>
-				</div>
-				<!-- <div class="item text-center">
-					<img src="./images/cat-img3.jpg" alt="">
-					<h4 class="categryName">Green Vegetables</h4>
-				</div>
-				<div class="item text-center">
-					<img src="./images/cat-img4.jpg" alt="">
-					<h4 class="categryName">organic Vegetables</h4>
-				</div>
-				<div class="item text-center">
-					<img src="./images/cat-img5.jpg" alt="">
-					<h4 class="categryName">Cut & Sprouts</h4>
-				</div> -->
-
+			<div class="owl-carousel bestSelling owl-theme mt-4">
+				<div class="item text-center bestSellingFruits_1"></div>
+				<div class="item text-center bestSellingFruits_2"></div>
 			</div>
-			<ul class="mb-0 pl-1">
-
-				<!-- <li class="align-items-center d-flex box_shadow mb-3">
-					<img src="./images/vegetables/cat-img1.jpg" alt="" class="" style=" width: 27%; max-width: 115px;">
-					<div class="d-flex flex-column ml-3">
-						<h6>Fresh Watermelon</h6>
-						<p class="mb-0">
-							<span class="mr-2 gray_color"><span style="text-decoration: line-through;" class="text-muted"><i class="fa-solid fa-indian-rupee-sign"></i> 30</span>
-							</span><span class="ml-2"><span class="green_color"><i class="fa-solid fa-indian-rupee-sign"></i> 20</span></span>
-						</p>
-					</div>
-				</li>
-				<li class="align-items-center d-flex box_shadow mb-3">
-					<img src="./images/vegetables/cat-img1.jpg" alt="" class="" style=" width: 27%; max-width: 115px;">
-					<div class="d-flex flex-column ml-3">
-						<h6>Fresh Watermelon</h6>
-						<p class="mb-0">
-							<span class="mr-2 gray_color"><span style="text-decoration: line-through;" class="text-muted"><i class="fa-solid fa-indian-rupee-sign"></i> 30</span>
-							</span><span class="ml-2"><span class="green_color"><i class="fa-solid fa-indian-rupee-sign"></i> 20</span></span>
-						</p>
-					</div>
-				</li> -->
-			</ul>
 		</div>
-
 	</div>
 </div>
+
 <!-- vegetables categray carousel  -->
-<!-- <div class="owl-carousel owl-theme my-4">
-	<div class="item text-center">
-		<img src="./images/cat-img1.jpg" alt="">
-		<h4 class="categryName">Fresh Vegetables</h4>
+<div class="container-fluid mb-5">
+	<div class="d-flex">
+		<h5>Vegetables</h5>
+		<p class="mb-0 ml-3"> <a href="#">( View All )</a></p>
 	</div>
-	<div class="item text-center">
-		<img src="./images/cat-img2.jpg" alt="">
-		<h4 class="categryName">Fruits</h4>
+	<div class="owl-carousel owl-theme my-4 productCarousel" id="owl_carousel_vegetables">
+		<!-- <div class="item text-center">
+			<img src="./images/cat-img4.jpg" alt="" width="300px">
+			<h4 class="categryName">Fresh Vegetables</h4>
+		</div>
+		<div class="item text-center">
+			<img src="./images/cat-img4.jpg" width="300px" alt="">
+			<h4 class="categryName">Fresh Vegetables</h4>
+		</div>
+		<div class="item text-center">
+			<img src="./images/cat-img4.jpg" width="300px" alt="">
+			<h4 class="categryName">Fresh Vegetables</h4>
+		</div>
+		<div class="item text-center">
+			<img src="./images/cat-img4.jpg" alt="">
+			<h4 class="categryName">Fresh Vegetables</h4>
+		</div>
+		<div class="item text-center">
+			<img src="./images/cat-img4.jpg" alt="">
+			<h4 class="categryName">Fresh Vegetables</h4>
+		</div>
+		<div class="item text-center">
+			<img src="./images/cat-img4.jpg" alt="">
+			<h4 class="categryName">Fresh Vegetables</h4>
+		</div> -->
 	</div>
-	<div class="item text-center">
-		<img src="./images/cat-img3.jpg" alt="">
-		<h4 class="categryName">Green Vegetables</h4>
+</div>
+<div class="container-fluid mb-5">
+	<div class="d-flex">
+		<h5>Fruits</h5>
+		<p class="mb-0 ml-3"> <a href="#">( View All )</a></p>
 	</div>
-	<div class="item text-center">
-		<img src="./images/cat-img4.jpg" alt="">
-		<h4 class="categryName">organic Vegetables</h4>
+	<div class="owl-carousel owl-theme my-4 productCarousel" id="owl_carousel_fruits">
+		<!-- <div class="item text-center">
+			<img src="./images/cat-img4.jpg" alt="" width="300px">
+			<h4 class="categryName">Fresh Vegetables</h4>
+		</div>
+		<div class="item text-center">
+			<img src="./images/cat-img4.jpg" width="300px" alt="">
+			<h4 class="categryName">Fresh Vegetables</h4>
+		</div>
+		<div class="item text-center">
+			<img src="./images/cat-img4.jpg" width="300px" alt="">
+			<h4 class="categryName">Fresh Vegetables</h4>
+		</div>
+		<div class="item text-center">
+			<img src="./images/cat-img4.jpg" alt="">
+			<h4 class="categryName">Fresh Vegetables</h4>
+		</div>
+		<div class="item text-center">
+			<img src="./images/cat-img4.jpg" alt="">
+			<h4 class="categryName">Fresh Vegetables</h4>
+		</div>
+		<div class="item text-center">
+			<img src="./images/cat-img4.jpg" alt="">
+			<h4 class="categryName">Fresh Vegetables</h4>
+		</div> -->
 	</div>
-	<div class="item text-center">
-		<img src="./images/cat-img5.jpg" alt="">
-		<h4 class="categryName">Cut & Sprouts</h4>
+</div>
+<div class="container-fluid mb-5">
+	<div class="d-flex">
+		<h5>Herbs</h5>
+		<p class="mb-0 ml-3"> <a href="#">( View All )</a></p>
 	</div>
+	<div class="owl-carousel owl-theme my-4 productCarousel" id="owl_carousel_hearbs">
+		<!-- <div class="item text-center border p-2">
+			<div class=" border">
+				<img src="./images/cat-img4.jpg" alt="" width="300px">
+				<h4 class="categryName">Fresh Vegetables</h4>
+			</div>
 
-</div> -->
+		</div>
+		<div class="item p-2">
+			<div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="border">
+				<img src="./images/cat-img4.jpg" alt="" width="300px" style=" border-radius: 9px;">
+				<div class="d-flex">
+					<h4 class="h5 pl-3 pr-2">Watermelon</h4>
+					<p class="green_color mb-1 weight text-muted">( 500 gm ) </p>
 
-<!-- product heading -->
-
-<!-- <h1 class="text-center productHeading">Latest Products</h1>
-<h6 class="productdiscrib w-75 mx-auto text-center text-secondary mb-3 ">Lorem ipsum labore ad reprehenderit omnis esse
-	odit voluptates sed perspiciatis quaerat, ipsam rem nam deleniti. Magnam non minus, ullam commodi architecto
-	aliquid fuga, in similique eos atque ratione ex beatae dolores, illum quidem alias saepe. Veritatis, ipsam
-	delectus? Id fugiat tenetur, incidunt architecto rem mollitia deserunt?</h6> -->
-
-<!-- products on tab system  -->
-<!-- <ul class="d-flex justify-content-center nav nav-tabs text-center" id="LatestProduct" role="tablist">
-	<li class="nav-item" role="presentation">
-		<a class="nav-link active" id="Newest_tab" data-toggle="tab" href="#Newest_product" role="tab"
-			aria-controls="Newest_product" aria-selected="true">Newest</a>
-	</li>
-	<li class="nav-item" role="presentation">
-		<a class="nav-link" id="Best_sale-tab" data-toggle="tab" href="#Best_sale-product" role="tab"
-			aria-controls="Best_sale-product" aria-selected="false">Best Sale</a>
-	</li>
-	<li class="nav-item" role="presentation">
-		<a class="nav-link" id="On_sale-tab" data-toggle="tab" href="#on_sale_product" role="tab"
-			aria-controls="on_sale_product" aria-selected="false">On Sale</a>
-	</li>
-</ul>
-<div class="tab-content" id="TabProductContent">
-	<div class="tab-pane fade show active" id="Newest_product" role="tabpanel" aria-labelledby="Newest_tab">
-		<div class="row mx-0">
-			<div class="border col-md-4 d-flex justify-content-around">
-				<div class="align-items-center product_view d-flex justify-content-center rounded-circle" style="">
-					<img src="./images/2-watermelon-without-bg.png" id="product_view_img" alt="" class="w-100">
-					<h6 class="product_price"><span><i class="fa-solid fa-indian-rupee-sign"></i></span> 100 / 1kg</h6>
+				</div>
+				<div class="align-items-center d-flex justify-content-between px-4">
+					<div class="">
+						<h5 class="Price"><span class=""><span class="green_color"><i
+										class="fa-indian-rupee-sign fa-solid mr-1"></i>100</span></span></h5>
+					</div>
+					<button class="border-secondary btn btn-sm green_bgcolor px-4 text-light" type="button"
+						style="letter-spacing: 1px;">Add</button>
 				</div>
 			</div>
 		</div>
-
+		<div class="item text-center">
+			<img src="./images/cat-img4.jpg" width="300px" alt="">
+			<h4 class="categryName">Fresh Vegetables</h4>
+		</div>
+		<div class="item text-center">
+			<img src="./images/cat-img4.jpg" width="300px" alt="">
+			<h4 class="categryName">Fresh Vegetables</h4>
+		</div>
+		<div class="item text-center">
+			<img src="./images/cat-img4.jpg" alt="">
+			<h4 class="categryName">Fresh Vegetables</h4>
+		</div>
+		<div class="item text-center">
+			<img src="./images/cat-img4.jpg" alt="">
+			<h4 class="categryName">Fresh Vegetables</h4>
+		</div>
+		<div class="item text-center">
+			<img src="./images/cat-img4.jpg" alt="">
+			<h4 class="categryName">Fresh Vegetables</h4>
+		</div> -->
 	</div>
-	<div class="tab-pane fade" id="Best_sale-product" role="tabpanel" aria-labelledby="Best_sale-tab">
-		.bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</div>
-	<div class="tab-pane fade" id="on_sale_product" role="tabpanel" aria-labelledby="On_sale-tab">
-		.xcccccccccccccccccccccccccccccc..</div>
-</div> -->
+</div>
+
+<!--mobile app  application section  -->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-6"></div>
+	</div>
+</div>
+
 
 <!-- // body  -->
 <!-- scripts -->
@@ -467,7 +261,7 @@
 	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script>
-	$('.owl-carousel').owlCarousel({
+	$('.bestSelling').owlCarousel({
 		loop: true,
 		margin: 10,
 		nav: true,
@@ -489,11 +283,40 @@
 			},
 			1024: {
 				items: 1
+			},
+
+		}
+	});
+	$('.productCarousel').owlCarousel({
+		loop: true,
+		// margin: 10,
+		padding: 10,
+		nav: true,
+		navText: ["<div class='align-items-center d-flex justify-content-center px-2 nav-btn prev-slide prenavigate'> <i class='fa-solid fa-caret-left'></i></div>", "<div class='align-items-center d-flex justify-content-center px-2 nav-btn next-slide postnavigate'> <i class='fa-solid fa-caret-right'></i></div>"],
+
+		autoplay: false,
+		autoplayTimeout: 3000,
+		autoplayHoverPause: true,
+		smartSpeed: 1300,
+		responsive: {
+			0: {
+				items: 1
+			},
+			500: {
+				items: 1
+			},
+			768: {
+				items: 3
+			},
+			1024: {
+				items: 4
+			}, 1440: {
+				items: 5
 			}
 		}
-	})
+	});
+
+
 </script>
 
 </html>
-<!-- <span><i class="fa-solid fa-caret-left"></i></span>
-					<span><i class="fa-solid fa-caret-right"></i></span> -->

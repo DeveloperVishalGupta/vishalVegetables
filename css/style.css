@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
 
 :root {
-    --patua: 'Patua One', cursive;
+    --patua: 'Patua One';
     --greenTheme: #1ab293;
     --gray_color:#707070;
     --textWhiteColor: #fff;
@@ -18,6 +18,9 @@
     
 
     /* --white: #ffffff; */
+}
+*{
+    color:#707070;
 }
 ul{
     list-style: none;
@@ -151,7 +154,7 @@ ul{
 
 /* index.html  */
 .bodyContainer {
-    height: calc(100vh - 80px);
+    height: calc(70vh - 80px);
     overflow: hidden;
 }
 
