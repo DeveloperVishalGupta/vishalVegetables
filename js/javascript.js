@@ -133,4 +133,3 @@ $("#appleStore").click(function () {
     $("#appleStore").removeClass("green_bgcolor border-secondary border animate__animated animate__slideInLeft"); 
     $("#playStore").addClass("green_bgcolor border-secondary border animate__animated animate__slideInRight"); 
  });
-
