@@ -57,6 +57,11 @@ ul{
 .row{
     margin: auto 0px !important;
 }
+.form-control:focus, .btn:focus{
+    outline: none;
+    box-shadow: none !important;
+
+}
 /* ============================================= ./ common css for all pages  ========================================================================== */
 /* =============================================  index page css  ========================================================================== */
 
@@ -82,6 +87,12 @@ ul{
     background: white;
     right: 0%;
     height: 25px;
+}
+.appstore{
+    padding: 0.25rem 1rem;
+    /* border: 1px solid #dee2e6 !important; */
+    border-radius: 10rem;
+    cursor: pointer;
 }
 
 /* ============================================= ./ index page css  ========================================================================== */
@@ -154,7 +165,7 @@ ul{
 
 /* index.html  */
 .bodyContainer {
-    height: calc(70vh - 80px);
+    height: calc(100vh - 80px);
     overflow: hidden;
 }
 

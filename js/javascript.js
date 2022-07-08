@@ -121,7 +121,16 @@ function product_carousel(image, productName, mrp, weight){
     </div>
 </div>`;
 return productList;
-// $("#owl_carousel_vegetables").append(productList)
-
 }
+
+// downlode app section 
+
+$("#appleStore").click(function () {
+    $("#playStore").removeClass("green_bgcolor border-secondary border  animate__animated animate__slideInRight"); 
+    $("#appleStore").addClass("green_bgcolor border-secondary border bo animate__animated animate__slideInLeft"); 
+ });
+ $("#playStore").click(function () {
+    $("#appleStore").removeClass("green_bgcolor border-secondary border animate__animated animate__slideInLeft"); 
+    $("#playStore").addClass("green_bgcolor border-secondary border animate__animated animate__slideInRight"); 
+ });
 

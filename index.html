@@ -36,6 +36,11 @@
 		integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
 		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+		<style>
+			::placeholder{
+				font-style: italic;
+			}
+		</style>
 </head>
 
 <body>
@@ -227,7 +232,29 @@
 <!--mobile app  application section  -->
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-6"></div>
+		<div class="col-md-6 position-relative ">
+			<div class=" ">
+				<img src="./images/mobile_Screenshot_2.png" class="position-absolute" style="width: 33%; left: 10%;" alt="">
+				<img src="./images/mobile_Screenshot_3.png" style="width: 33%; right: 10%;" class="position-absolute" alt="">
+				<img src="./images/mobile_Screenshot_1.png" style="width: 33%; left: 35%; top: 28px;" class="position-absolute" alt="">
+			</div>
+		</div>
+		<div class="col-md-6 pt-5">
+			<h1 style="border-radius: 2.7rem;" class="text-center">DOWNLODE THE APP</h1>
+			<p class="mx-auto text-center w-75">Enter your phone number to receive a text with a link to download the app</p>
+			<div class="badge-pill border border-secondary d-flex justify-content-center mx-auto px-1 py-1" style="width: 279px;">
+				<div class="green_bgcolor border appstore border-secondary" id="playStore" style="animation-duration: .5s !important;">
+					<span class=""><i class="fa-brands fa-google-play text-dark"></i></span><span class="pl-2 text-dark">Play Store</span>
+				</div>
+					<div class="appstore" id="appleStore" style="animation-duration: .5s !important; ">
+						<span><i class="fa-brands fa-apple text-dark" style="font-size: larger;"></i></span><span class="pl-2 text-dark">Apple Store</span>
+					</div> 	 	
+			</div>
+			<input type="text" placeholder="Enter Your Mobile Number..." class="mx-auto w-75 badge-pill border-secondary form-control mt-4 px-4 py-2">
+			<div class="mt-4 text-center">
+				<button class="btn btn-sm green_bgcolor px-3 text-light" style="letter-spacing: .6px;">Submit</button>
+			</div>
+		</div>
 	</div>
 </div>
 
