@@ -1,52 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<!-- links -->
-	<!-- custom style link  -->
-	<link rel="stylesheet" href="./css/style.css">
 
-	<!-- boostrap css link  -->
-	<!-- <link rel="stylesheet" href="./boostrap/css/bootstrap.min.css"> -->
-	<link rel="stylesheet" href="./boostrap/css/bootstrap.css">
-
-	<!-- animate.js cdn  -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-		integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-	<!-- font awosome -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-		integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-	<!-- owlcarousel css  -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
-		integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-		integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<!-- jquery cdn link  -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-		integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-		<style>
-			::placeholder{
-				font-style: italic;
-			}
-		</style>
-</head>
 
 <body>
 
 	<!-- header  -->
-	<!-- <?php include_once("header.php") ?> -->
+		<?php include_once("header.php") ?>
 	<!-- // header  -->
 
 </body>
@@ -78,21 +38,7 @@
 		<div class="box_shadow_with_padding">
 			<h5>Best Selling Vegetables</h5>
 			<div class="owl-carousel bestSelling owl-theme mt-4" id="">
-				<div class="item text-center best_Selling_vegetables_1">
-					<!-- <li class="align-items-center d-flex box_shadow mb-3 product_list">
-						<img src="./images/vegetables/cat-img1.jpg" alt="" class=""
-							style=" width: 27%; max-width: 115px;">
-						<div class="d-flex flex-column ml-3">
-							<h6>Fresh Watermelon</h6>
-							<p class="mb-0">
-								<span class="mr-2 gray_color"><span style="text-decoration: line-through;"
-										class="text-muted"><i class="fa-solid fa-indian-rupee-sign"></i> 30</span>
-								</span><span class="ml-2"><span class="green_color"><i
-											class="fa-solid fa-indian-rupee-sign"></i> 20</span></span>
-							</p>
-						</div>
-					</li>  -->
-				</div>
+				<div class="item text-center best_Selling_vegetables_1"></div>
 				<div class="item text-center  best_Selling_vegetables_2"></div>
 			</div>
 		</div>
@@ -114,66 +60,16 @@
 <div class="container-fluid mb-5">
 	<div class="d-flex">
 		<h5>Vegetables</h5>
-		<p class="mb-0 ml-3"> <a href="#">( View All )</a></p>
+		<p class="mb-0 ml-3"> <a href="./vegetables.php">( View All )</a></p>
 	</div>
-	<div class="owl-carousel owl-theme my-4 productCarousel" id="owl_carousel_vegetables">
-		<!-- <div class="item text-center">
-			<img src="./images/cat-img4.jpg" alt="" width="300px">
-			<h4 class="categryName">Fresh Vegetables</h4>
-		</div>
-		<div class="item text-center">
-			<img src="./images/cat-img4.jpg" width="300px" alt="">
-			<h4 class="categryName">Fresh Vegetables</h4>
-		</div>
-		<div class="item text-center">
-			<img src="./images/cat-img4.jpg" width="300px" alt="">
-			<h4 class="categryName">Fresh Vegetables</h4>
-		</div>
-		<div class="item text-center">
-			<img src="./images/cat-img4.jpg" alt="">
-			<h4 class="categryName">Fresh Vegetables</h4>
-		</div>
-		<div class="item text-center">
-			<img src="./images/cat-img4.jpg" alt="">
-			<h4 class="categryName">Fresh Vegetables</h4>
-		</div>
-		<div class="item text-center">
-			<img src="./images/cat-img4.jpg" alt="">
-			<h4 class="categryName">Fresh Vegetables</h4>
-		</div> -->
-	</div>
+	<div class="owl-carousel owl-theme my-4 productCarousel" id="owl_carousel_vegetables"></div>
 </div>
 <div class="container-fluid mb-5">
 	<div class="d-flex">
 		<h5>Fruits</h5>
 		<p class="mb-0 ml-3"> <a href="#">( View All )</a></p>
 	</div>
-	<div class="owl-carousel owl-theme my-4 productCarousel" id="owl_carousel_fruits">
-		<!-- <div class="item text-center">
-			<img src="./images/cat-img4.jpg" alt="" width="300px">
-			<h4 class="categryName">Fresh Vegetables</h4>
-		</div>
-		<div class="item text-center">
-			<img src="./images/cat-img4.jpg" width="300px" alt="">
-			<h4 class="categryName">Fresh Vegetables</h4>
-		</div>
-		<div class="item text-center">
-			<img src="./images/cat-img4.jpg" width="300px" alt="">
-			<h4 class="categryName">Fresh Vegetables</h4>
-		</div>
-		<div class="item text-center">
-			<img src="./images/cat-img4.jpg" alt="">
-			<h4 class="categryName">Fresh Vegetables</h4>
-		</div>
-		<div class="item text-center">
-			<img src="./images/cat-img4.jpg" alt="">
-			<h4 class="categryName">Fresh Vegetables</h4>
-		</div>
-		<div class="item text-center">
-			<img src="./images/cat-img4.jpg" alt="">
-			<h4 class="categryName">Fresh Vegetables</h4>
-		</div> -->
-	</div>
+	<div class="owl-carousel owl-theme my-4 productCarousel" id="owl_carousel_fruits">	</div>
 </div>
 <div class="container-fluid mb-5">
 	<div class="d-flex">
@@ -181,13 +77,7 @@
 		<p class="mb-0 ml-3"> <a href="#">( View All )</a></p>
 	</div>
 	<div class="owl-carousel owl-theme my-4 productCarousel" id="owl_carousel_hearbs">
-		<!-- <div class="item text-center border p-2">
-			<div class=" border">
-				<img src="./images/cat-img4.jpg" alt="" width="300px">
-				<h4 class="categryName">Fresh Vegetables</h4>
-			</div>
-
-		</div>
+		<!-- 
 		<div class="item p-2">
 			<div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="border">
 				<img src="./images/cat-img4.jpg" alt="" width="300px" style=" border-radius: 9px;">
@@ -205,38 +95,18 @@
 						style="letter-spacing: 1px;">Add</button>
 				</div>
 			</div>
-		</div>
-		<div class="item text-center">
-			<img src="./images/cat-img4.jpg" width="300px" alt="">
-			<h4 class="categryName">Fresh Vegetables</h4>
-		</div>
-		<div class="item text-center">
-			<img src="./images/cat-img4.jpg" width="300px" alt="">
-			<h4 class="categryName">Fresh Vegetables</h4>
-		</div>
-		<div class="item text-center">
-			<img src="./images/cat-img4.jpg" alt="">
-			<h4 class="categryName">Fresh Vegetables</h4>
-		</div>
-		<div class="item text-center">
-			<img src="./images/cat-img4.jpg" alt="">
-			<h4 class="categryName">Fresh Vegetables</h4>
-		</div>
-		<div class="item text-center">
-			<img src="./images/cat-img4.jpg" alt="">
-			<h4 class="categryName">Fresh Vegetables</h4>
 		</div> -->
 	</div>
 </div>
 
 <!--mobile app  application section  -->
-<div class="container-fluid">
+<div class="container-fluid " style="height:450px;">
 	<div class="row">
-		<div class="col-md-6 position-relative ">
+		<div class="col-md-6 position-relative">
 			<div class=" ">
-				<img src="./images/mobile_Screenshot_2.png" class="position-absolute" style="width: 33%; left: 10%;" alt="">
-				<img src="./images/mobile_Screenshot_3.png" style="width: 33%; right: 10%;" class="position-absolute" alt="">
-				<img src="./images/mobile_Screenshot_1.png" style="width: 33%; left: 35%; top: 28px;" class="position-absolute" alt="">
+				<img src="./images/mobile_Screenshot_2.png"  style="width: 27%; left: 14%; top:3%;" class="position-absolute" alt="">
+				<img src="./images/mobile_Screenshot_3.png" style="width: 27%; right: 14%; top:3%;" class="position-absolute" alt="">
+				<img src="./images/mobile_Screenshot_1.png" style="width: 27%; left: 36.5%; top: 10%;" class="position-absolute" alt="">
 			</div>
 		</div>
 		<div class="col-md-6 pt-5">
@@ -258,6 +128,8 @@
 	</div>
 </div>
 
+<!-- footer  -->
+<?php include_once("footer.php") ?>
 
 <!-- // body  -->
 <!-- scripts -->
@@ -342,7 +214,7 @@
 			}
 		}
 	});
-
+		 
 
 </script>
 

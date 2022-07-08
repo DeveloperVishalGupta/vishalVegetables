@@ -60,9 +60,64 @@ ul{
 .form-control:focus, .btn:focus{
     outline: none;
     box-shadow: none !important;
+}
+/* scroller of page  */
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: lightgray;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #1ab293;
 }
 /* ============================================= ./ common css for all pages  ========================================================================== */
+/* =============================================  headerpage  css for all pages  ========================================================================== */
+
+.menu1 {
+    position: sticky;
+    top: 0 !important;
+    width: 100%;
+    background-color: var(--textWhiteColor);
+    z-index: 1000000 !important;
+}
+
+/* upperHeader green color header menu  */
+.upperHeader {
+    border-bottom-left-radius: 52px !important;
+    background-color: var(--greenTheme);
+    color: var(--textWhiteColor);
+    letter-spacing: var(--letterSpacing);
+}
+
+.contactNumber:hover,
+.contactEmail:hover,
+.login:hover {
+    color: var(--onHoverTextColor);
+}
+
+/* lower header menu  */
+
+.menuList li a {
+    color: #000;
+    text-decoration: none;
+}
+
+.menuList li a:hover {
+    color: var(--greenTheme);
+}
+/* ============================================= ./ header page css css for all pages  ========================================================================== */
+
 /* =============================================  index page css  ========================================================================== */
 
 .best_SellingofferCard{
@@ -98,25 +153,7 @@ ul{
 /* ============================================= ./ index page css  ========================================================================== */
 
 
-/* width */
-::-webkit-scrollbar {
-    width: 4px;
-}
 
-/* Track */
-::-webkit-scrollbar-track {
-    background: #fff;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: lightgray;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #1ab293;
-}
 
 * {
     font-family: var(--patua);
@@ -130,38 +167,7 @@ ul{
 }
 
 
-.menu1 {
-    position: sticky;
-    top: 0 !important;
-    width: 100%;
-    background-color: var(--textWhiteColor);
-    z-index: 1;
-}
 
-/* upperHeader green color header menu  */
-.upperHeader {
-    border-bottom-left-radius: 52px !important;
-    background-color: var(--greenTheme);
-    color: var(--textWhiteColor);
-    letter-spacing: var(--letterSpacing);
-}
-
-.contactNumber:hover,
-.contactEmail:hover,
-.login:hover {
-    color: var(--onHoverTextColor);
-}
-
-/* lower header menu  */
-
-.menuList li a {
-    color: #000;
-    text-decoration: none;
-}
-
-.menuList li a:hover {
-    color: var(--greenTheme);
-}
 
 /* index.html  */
 .bodyContainer {
@@ -281,28 +287,50 @@ ul{
     left: 17%;
 }
 
-/* ========================================================================= view Product page =========================================  */
+/* ========================================================================= vegetables page css =========================================  */
+    .vegetablesPageBanner{
+        background-image: url(../images/banners/vegetablesPageBanner.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+/* ========================================================================= ./ vegetables page css =========================================  */
+/* ========================================================================= footer page css =========================================  */
+.footer{
+    background-image: url(../images/banners/footerImage1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.footer li{
+    color: whitesmoke;
+}
+.footer li::before{
+    content: "\00BB";
+    padding-right: 10px;
+    color: whitesmoke;
+    font-size: 18px;
+}
+.footer li:hover{
+    color: var(--greenTheme);
+}
+.social_icons{
+    background: var(--textWhiteColor);
+    font-size: large;
+    border: 1px solid var(--greenTheme);
+    color: var(--greenTheme);
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+    margin-right: .25rem;
+    border-radius: 0.3rem;
+}
+.social_icons:hover{
+    color: var(--textWhiteColor);
+    background: var(--greenTheme);
+    border: 1px solid var(--textWhiteColor);
+}
+.footer a:hover{
+    text-decoration: none;
+}
 
 
-  
-  /* .label {
-    display: flex;
-    align-items: center;
-    padding: 0.75rem 0;
-    color: #fff;
-    font-size: 1.25rem;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.25s linear;
-  }
-  
-  .label::before {
-    display: inline-block;
-    content: "";
-    height: 1.125rem;
-    width: 1.125rem;
-    margin-right: 0.625rem;
-    border: 0.5rem solid #fff;
-    border-radius: 50%;
-    transition: all 0.25s linear;
-  } */
+/* ========================================================================= ./ footer page css =========================================  */
+
