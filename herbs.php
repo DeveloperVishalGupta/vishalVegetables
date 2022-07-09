@@ -6,14 +6,14 @@
 
 <body>
 	<!-- body  -->
-	<div class="container-fluid vegetablesPageBanner" style="height: 60vh;">
+	<div class="container-fluid HerbsPageBanner" style="height: 60vh;">
 		<div class="BannerOfferbg p-3">
 
 		</div>
 		<div class="position-relative" style="height: 55vh;">
 			<div class="position-absolute vegetablesbannerBGBlur"></div>
 			<div class="vegetablesBannerOffer d-flex flex-column justify-content-end pl-3 position-absolute px-4 py-4 text-light">
-				<h4 class="text-uppercase">FRESH Vegetables</h4>
+				<h4 class="text-uppercase">FRESH Herbs</h4>
 				<h1 class="green_color">Organic Food 20% off</h1>
 				<h4>Get 30% off on your 1st order</h4>
 			</div>
@@ -23,7 +23,7 @@
 	</div>
 	<div class="mb-3 pb-2 pt-3 mt-3 px-5 row" style="background-color: #f7f7f7;">
 		<div class="col-md-12 " style="line-height: 50px;">
-			<h3 class="selectedCategry">Fresh Vegetables</h3>
+			<h3 class="selectedCategry">Fresh Herbs</h3>
 		</div>
 	</div>
 	<div class="container-fluid">
@@ -44,11 +44,11 @@
 					</div>
 				</div>
 			</div>
-		
+
 		</div>
 	</div>
 	<!-- // body  -->
-	<?php include_once("footer.php")?>
+	<?php include_once("footer.php") ?>
 	<script src="./js/javascript.js"></script>
 </body>
 

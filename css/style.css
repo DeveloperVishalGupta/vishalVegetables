@@ -1,63 +1,63 @@
 /* =============================================  common css for all pages  ========================================================================== */
 
 /* patua one google font  */
-@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
 
 :root {
-    --patua: 'Patua One';
+    --patua: "Patua One";
     --greenTheme: #1ab293;
-    --gray_color:#707070;
+    --gray_color: #707070;
     --textWhiteColor: #fff;
     --onHoverTextColor: #000;
-    --letterSpacing: .5px;
+    --letterSpacing: 0.5px;
     --BoxShaow: 1px 1px 7px 0px #c0c0c0;
     --allcapitalLetter: uppercase;
     --textualHeading: 1rem; /* or write in h6 tag */
     --LastHeading: 1.25rem; /* or write in h5 tag */
     --SecondryHeading: 1.5rem; /* or write in h4 tag */
-    
 
     /* --white: #ffffff; */
 }
-*{
-    color:#707070;
+* {
+    color: #707070;
 }
-ul{
+ul {
     list-style: none;
     padding-left: 3rem;
 }
-.box_shadow_with_padding{
+.box_shadow_with_padding {
     box-shadow: var(--BoxShaow);
     border-radius: 8px;
     padding: 1rem 1.5rem;
 }
-.box_shadow{
+.box_shadow {
     box-shadow: var(--BoxShaow);
     border-radius: 8px;
 }
-.green_color{
+.green_color {
     color: var(--greenTheme);
 }
-.gray_color{
+.gray_color {
     color: var(--gray_color);
 }
-.green_bgcolor{
+.green_bgcolor {
     background-color: var(--greenTheme);
 }
-.owl-nav{
+.owl-nav {
     height: 0px;
 }
-.owl-dots{
+.owl-dots {
     display: none;
 }
-.product_list{
+.product_list {
     width: 95%;
     margin: auto;
 }
-.row{
+.row {
     margin: auto 0px !important;
 }
-.form-control:focus, .btn:focus{
+.form-control:focus,
+.btn:focus {
     outline: none;
     box-shadow: none !important;
 }
@@ -120,7 +120,7 @@ ul{
 
 /* =============================================  index page css  ========================================================================== */
 
-.best_SellingofferCard{
+.best_SellingofferCard {
     background-image: url(../images/banners/carrot_offer.jpg);
     height: 100%;
     background-size: cover;
@@ -129,21 +129,21 @@ ul{
     border-radius: 8px;
     filter: brightness(0.8);
 }
-.owl-carousel button .prev-slide{
+.owl-carousel button .prev-slide {
     position: absolute;
     top: -14%;
     background: white;
     right: 11%;
     height: 25px;
 }
-.owl-carousel button .next-slide{
+.owl-carousel button .next-slide {
     position: absolute;
     top: -14%;
     background: white;
     right: 0%;
     height: 25px;
 }
-.appstore{
+.appstore {
     padding: 0.25rem 1rem;
     /* border: 1px solid #dee2e6 !important; */
     border-radius: 10rem;
@@ -152,22 +152,15 @@ ul{
 
 /* ============================================= ./ index page css  ========================================================================== */
 
-
-
-
 * {
     font-family: var(--patua);
     box-sizing: border-box;
-
 }
 
 /* shadow css  */
 .shadow {
     box-shadow: var(--BoxShaow);
 }
-
-
-
 
 /* index.html  */
 .bodyContainer {
@@ -199,16 +192,16 @@ ul{
     top: 124px;
     transition-duration: 5s;
 }
- /* first categry product causel  */
- .categryName:hover{
-     color: var(--onHoverTextColor);
- }
- .categryName{
+/* first categry product causel  */
+.categryName:hover {
+    color: var(--onHoverTextColor);
+}
+.categryName {
     color: var(--greenTheme);
 }
 
-.prenavigate, .postnavigate{
-    
+.prenavigate,
+.postnavigate {
     border: 1px solid;
     padding: 0px 11px !important;
     border-radius: 3px;
@@ -219,18 +212,21 @@ ul{
     margin-bottom: 0px !important;
     /* padding-bottom: 4px !important; */
 }
-.prenavigate:focus-visible, .postnavigate:focus-visible{
+.prenavigate:focus-visible,
+.postnavigate:focus-visible {
     border: 2px solid var(--greenTheme);
     outline: none !important;
 }
 
-.owl-carousel button .next-slide:hover, .owl-carousel button .prev-slide:hover{
+.owl-carousel button .next-slide:hover,
+.owl-carousel button .prev-slide:hover {
     background-color: var(--greenTheme);
     color: var(--textWhiteColor);
     border: var(--onHoverTextColor);
 }
 
-.productHeading, .productdiscrib{
+.productHeading,
+.productdiscrib {
     font-family: var(--patua);
 }
 /* LatestProduct */
@@ -239,99 +235,141 @@ ul{
     border: 1px transparent;
     color: var(--greenTheme);
 } */
-.nav-link{
+.nav-link {
     color: #1ab293;
     border: 1px solid transparent !important;
 }
-.nav-link:hover{
+.nav-link:hover {
     color: #000;
     border: 1px solid transparent !important;
 }
-.product_view{
+.product_view {
     background: #1ab293;
-     height: 215px;
-      width: 215px;
-      transition: 1s;
+    height: 215px;
+    width: 215px;
+    transition: 1s;
 }
-.product_view:hover{
+.product_view:hover {
     width: 400px;
     border-radius: 10px !important;
     position: relative;
     padding: auto 0px;
-
 }
-.product_view:hover #product_view_img{
+.product_view:hover #product_view_img {
     width: 160px !important;
     position: absolute;
     right: 0ch;
     top: 6%;
     /* height: 200px ;    */
 }
-.product_price{
+.product_price {
     visibility: hidden;
 }
-.product_view:hover .product_price{
-   visibility: visible;
-   transition-delay: 300ms;
-   transition: 1s;
-   position: absolute;
-   bottom: 10%;
-   right: 10%;
+.product_view:hover .product_price {
+    visibility: visible;
+    transition-delay: 300ms;
+    transition: 1s;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
 }
-.add_to_card_btn{
+.add_to_card_btn {
     bottom: 10%;
     left: 18%;
 }
-.product_name{
+.product_name {
     top: 9%;
     left: 17%;
 }
 
-/* ========================================================================= vegetables page css =========================================  */
-    .vegetablesPageBanner{
-        background-image: url(../images/banners/vegetablesPageBanner.jpg);
-        background-size: cover;
-        background-position: center;
-    }
+/* ========================================================================= vegetables and fruits page css =========================================  */
+.vegetablesPageBanner {
+    background: url(../images/banners/vegetablesPageBanner.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.FruitsPageBanner{
+    background: url(../images/banners/fruitsPage.jpg);
+    background-position: center;
+    background-size: cover;
+}
 
-/* ========================================================================= ./ vegetables page css =========================================  */
+.HerbsPageBanner{
+    background: url(../images/banners/hearbsPageBanner.jpg);
+    background-position: center;
+    background-size: cover;
+}
+/* background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit; */
+
+.vegetablesBannerOffer {
+    z-index: 1;
+    left: 13.5%;
+    filter: drop-shadow(2px 4px 6px black);
+    top: 30%;
+}
+.vegetablesbannerBGBlur {
+    width: 450px;
+    background: #6563639e;
+    height: 224px;
+    filter: blur(5px);
+    z-index: 1;
+    left: 13%;
+    border-radius: 12px;
+    top: 25%;
+}
+.FruitsBannerOffer {
+    z-index: 1;
+    right: 13.5%;
+    filter: drop-shadow(2px 4px 6px black);
+    top: 30%;
+}
+.FruitsbannerBGBlur {
+    width: 450px;
+    background: #6563639e;
+    height: 224px;
+    filter: blur(5px);
+    z-index: 1;
+    right: 13%;
+    border-radius: 12px;
+    top: 25%;
+}
+
+/* ========================================================================= ./ vegetables   and fruits page css =========================================  */
 /* ========================================================================= footer page css =========================================  */
-.footer{
+.footer {
     background-image: url(../images/banners/footerImage1.jpg);
     background-size: cover;
     background-position: center;
 }
-.footer li{
+.footer li {
     color: whitesmoke;
 }
-.footer li::before{
+.footer li::before {
     content: "\00BB";
     padding-right: 10px;
     color: whitesmoke;
     font-size: 18px;
 }
-.footer li:hover{
+.footer li:hover {
     color: var(--greenTheme);
 }
-.social_icons{
+.social_icons {
     background: var(--textWhiteColor);
     font-size: large;
     border: 1px solid var(--greenTheme);
     color: var(--greenTheme);
     font-weight: 500;
     padding: 0.25rem 0.5rem;
-    margin-right: .25rem;
+    margin-right: 0.25rem;
     border-radius: 0.3rem;
 }
-.social_icons:hover{
+.social_icons:hover {
     color: var(--textWhiteColor);
     background: var(--greenTheme);
     border: 1px solid var(--textWhiteColor);
 }
-.footer a:hover{
+.footer a:hover {
     text-decoration: none;
 }
 
-
 /* ========================================================================= ./ footer page css =========================================  */
-

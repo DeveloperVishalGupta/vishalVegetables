@@ -67,14 +67,14 @@
 <div class="container-fluid mb-5">
 	<div class="d-flex">
 		<h5>Fruits</h5>
-		<p class="mb-0 ml-3"> <a href="#">( View All )</a></p>
+		<p class="mb-0 ml-3"> <a href="./Fruits.php">( View All )</a></p>
 	</div>
 	<div class="owl-carousel owl-theme my-4 productCarousel" id="owl_carousel_fruits">	</div>
 </div>
 <div class="container-fluid mb-5">
 	<div class="d-flex">
 		<h5>Herbs</h5>
-		<p class="mb-0 ml-3"> <a href="#">( View All )</a></p>
+		<p class="mb-0 ml-3"> <a href="./herbs.php">( View All )</a></p>
 	</div>
 	<div class="owl-carousel owl-theme my-4 productCarousel" id="owl_carousel_hearbs">
 		<!-- 

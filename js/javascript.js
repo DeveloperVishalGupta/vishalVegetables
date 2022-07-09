@@ -123,7 +123,7 @@ function product_carousel(image, productName, mrp, weight){
 return productList;
 }
 
-// downlode app section 
+// index page downlode app section 
 
 $("#appleStore").click(function () {
     $("#playStore").removeClass("green_bgcolor border-secondary border  animate__animated animate__slideInRight"); 
@@ -133,3 +133,83 @@ $("#appleStore").click(function () {
     $("#appleStore").removeClass("green_bgcolor border-secondary border animate__animated animate__slideInLeft"); 
     $("#playStore").addClass("green_bgcolor border-secondary border animate__animated animate__slideInRight"); 
  });
+
+ ///////////////////////////////////////////////////////  vegetables product details  /////////////////////////////////////////////////////
+ const Vegetables_pageProduct = [
+    {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli", MRP:"30", sellingPrice:"25"},
+    {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli", MRP:"30", sellingPrice:"25"},
+    {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli", MRP:"30", sellingPrice:"25"},
+    {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli", MRP:"30", sellingPrice:"25"},
+    {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli", MRP:"30", sellingPrice:"25"},
+    {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli", MRP:"30", sellingPrice:"25"},
+    {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli", MRP:"30", sellingPrice:"25"}
+];
+for (let i of  Vegetables_pageProduct) {
+    var Vegetables_pageProductdetalis = ViewAllproduct_carousel(i.image, i.ProductName, i.MRP, i.weight);
+    $("#AllVegetable").append(Vegetables_pageProductdetalis);
+}
+function ViewAllproduct_carousel(image, productName, mrp, weight){
+    let productList = `<div class="col-md-4 col-lg-3 mb-4">
+    <div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="border pb-2 text-center">
+        <img src="${image}" alt="" style=" width:250px;" style=" border-radius: 9px;">
+        <div class="d-flex">
+            <h4 class="h5 pl-3 pr-2">${productName}</h4>
+            <p class="green_color mb-1 weight text-muted">(  ${weight} ) </p>
+
+        </div>
+        <div class="align-items-center d-flex justify-content-between px-4">
+            <div class="">
+                <h5 class="Price"><span class=""><span class="green_color"><i class="fa-indian-rupee-sign fa-solid mr-1"></i>${mrp}</span></span></h5>
+            </div>
+            <button class="border-secondary btn btn-sm green_bgcolor px-4 text-light" type="button" style="letter-spacing: 1px;">Add</button>
+        </div>
+    </div>
+</div>`;
+return productList;
+}
+ //===================================================== ./  vegetables product details  =====================================================
+ //=====================================================  viewproduct details page js  =====================================================
+ $("#favirateProduct").click(function() {
+     $(this).toggleClass('fa-solid text-danger fa-regular');
+     calltoster('Like', "Added to Favirate", "green" )
+ })
+
+//  const productQuentityArray=[{}]
+//  for (let i = 0; i < 4; i++) {
+     
+//      productQuentity('1kg', '750 gm', '500 gm', '250 gm')
+//  }
+//  function productQuentity(qt1,qt2,qt3,qt4) {
+//     var productQuentityList = `<div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="border">
+//     <div class="align-items-center d-flex justify-content-around ">
+//         <img src="./images/2-watermelon.jpg" alt="" class="" style="width: 75px;">
+//         <h5 class="Price">
+//             <span class="">
+//                 <span class="green_color">
+//                     <i class="fa-indian-rupee-sign fa-solid mr-1"></i>
+//                     100</span>
+//             </span>
+//         </h5>
+//         <p class="green_color mb-1 weight text-muted">1 Kg </p>
+//         <input type="radio" class="radio-btn" name="productWeight" id="">
+//     </div>
+// </div>`;
+// $("#ProductQuentity").append(productQuentityList);
+//  }
+ //===================================================== ./ viewproduct details page js =====================================================
+
+//  toster js 
+
+function calltoster(title, massage,color) {
+    iziToast.show({
+        position: 'topRight',
+        title: title,
+        message: massage,
+        zindex:999999999,
+        color:color,
+        transitionIn: 'bounceInDown',// bottomRight, bottomLeft, topRight, topLeft, topCenter, bottomCenter, center
+        // theme: 'dark'
+
+    });
+}
+
