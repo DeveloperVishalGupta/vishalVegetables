@@ -85,17 +85,51 @@
                 </div>
             </div>
         </div>
-       
+
     </div>
     <div class="container-fluid">
-    <div class="mb-3 pb-2 pt-3 mt-3 px-5 row" style="background-color: #f7f7f7;">
+        <div class="mb-3 pb-2 pt-3 mt-3 px-5 row" style="background-color: #f7f7f7;">
             <div class="col-md-12 " style="line-height: 50px;">
                 <h3 class="selectedCategry">Suggestion</h3>
             </div>
         </div>
+	<div class="owl-carousel owl-theme my-4 suggestionproductCarousel" id="suggestionproductCarousel"></div>
+
     </div>
 
 </body>
+<?php include_once("./footer.php") ?>
+
 <script src="./js/javascript.js"></script>
+<script>
+    $('.suggestionproductCarousel').owlCarousel({
+		loop: true,
+		navigation: true,
+		padding: 10,
+		nav: true,
+		navText: ["<div class='align-items-center d-flex justify-content-center px-2 nav-btn prev-slide prenavigate'> <i class='fa-solid fa-caret-left'></i></div>", "<div class='align-items-center d-flex justify-content-center px-2 nav-btn next-slide postnavigate'> <i class='fa-solid fa-caret-right'></i></div>"],
+
+		autoplay: true,
+		autoplayTimeout: 3000,
+		autoplayHoverPause: true,
+		smartSpeed: 1300,
+		responsive: {
+			0: {
+				items: 1
+			},
+			500: {
+				items: 1
+			},
+			768: {
+				items: 3
+			},
+			1024: {
+				items: 4
+			}, 1440: {
+				items: 5
+			}
+		}
+	});
+</script>
 
 </html>

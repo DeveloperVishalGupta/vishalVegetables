@@ -94,6 +94,8 @@ const herbsCarousel = [
 for (let i of  vegetablesCarousel) {
     var carouselProduct = product_carousel(i.image, i.ProductName, i.MRP, i.weight);
     $("#owl_carousel_vegetables").append(carouselProduct);
+    $("#suggestionproductCarousel").append(carouselProduct);
+    console.log($("#suggestionproductCarousel").append(carouselProduct));
 }
 for (let i of  fruitsCarousel) {
     var carouselProduct = product_carousel(i.image, i.ProductName, i.MRP, i.weight);
@@ -145,10 +147,10 @@ $("#appleStore").click(function () {
     {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli", MRP:"30", sellingPrice:"25"}
 ];
 for (let i of  Vegetables_pageProduct) {
-    var Vegetables_pageProductdetalis = ViewAllproduct_carousel(i.image, i.ProductName, i.MRP, i.weight);
+    var Vegetables_pageProductdetalis = ViewAllproduct(i.image, i.ProductName, i.MRP, i.weight);
     $("#AllVegetable").append(Vegetables_pageProductdetalis);
 }
-function ViewAllproduct_carousel(image, productName, mrp, weight){
+function ViewAllproduct(image, productName, mrp, weight){
     let productList = `<div class="col-md-4 col-lg-3 mb-4">
     <div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="border pb-2 text-center">
         <img src="${image}" alt="" style=" width:250px;" style=" border-radius: 9px;">
