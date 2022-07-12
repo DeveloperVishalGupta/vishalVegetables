@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<style>
+    .owl-carousel button .next-slide {
+    top: -31% !important;
+    right: 1% !important;
+}
+.owl-carousel button .prev-slide {
+    top: -31% !important;
+    right: 6% !important;
+}
+</style>
 <body>
     <!-- header  -->
     <?php include_once("./header.php") ?>
@@ -90,7 +99,7 @@
     <div class="container-fluid">
         <div class="mb-3 pb-2 pt-3 mt-3 px-5 row" style="background-color: #f7f7f7;">
             <div class="col-md-12 " style="line-height: 50px;">
-                <h3 class="selectedCategry">Suggestion</h3>
+                <h3 class="selectedCategry">Suggestion <a href="./vegetables.php" class="small" style="color: #797979c7;">( View All )</a></h3>
             </div>
         </div>
 	<div class="owl-carousel owl-theme my-4 suggestionproductCarousel" id="suggestionproductCarousel"></div>
@@ -99,6 +108,13 @@
 
 </body>
 <?php include_once("./footer.php") ?>
+<!-- owl carousel cdn  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+	integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+	integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
+	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script src="./js/javascript.js"></script>
 <script>

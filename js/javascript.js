@@ -95,7 +95,6 @@ for (let i of  vegetablesCarousel) {
     var carouselProduct = product_carousel(i.image, i.ProductName, i.MRP, i.weight);
     $("#owl_carousel_vegetables").append(carouselProduct);
     $("#suggestionproductCarousel").append(carouselProduct);
-    console.log($("#suggestionproductCarousel").append(carouselProduct));
 }
 for (let i of  fruitsCarousel) {
     var carouselProduct = product_carousel(i.image, i.ProductName, i.MRP, i.weight);
@@ -199,6 +198,16 @@ return productList;
 // $("#ProductQuentity").append(productQuentityList);
 //  }
  //===================================================== ./ viewproduct details page js =====================================================
+
+ //===================================================== cart details page js =====================================================
+ $("#cartIcon").click(function(){
+    console.log("|thi =s id red");
+
+    $(this).toggleClass('green_color');
+ });
+
+ //===================================================== ./ cart details page js =====================================================
+
 
 //  toster js 
 

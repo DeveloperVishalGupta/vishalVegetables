@@ -10,6 +10,8 @@
 	<!-- custom style link  -->
 	<link rel="stylesheet" href="./css/style.css">
 
+	<!-- animated css  -->
+	<!-- <link rel="stylesheet" href="./node_modules/animate.css/animate.css"> -->
 	<!-- boostrap css link  -->
 	<!-- <link rel="stylesheet" href="./boostrap/css/bootstrap.min.css"> -->
 	<link rel="stylesheet" href="./boostrap/css/bootstrap.css">
@@ -73,9 +75,9 @@
 							<li><a href="#">FRUITS</a></li>
 							<li><a href="#">CONNECT US</a></li>
 							<li>
-								<a href="#"><span><i class="fa-regular fa-heart"></i></span></a>
-								<a href="#" class="px-3"><span><i class="fa-solid fa-bag-shopping"></i></span></a>
-								<a href="#"><span><i class="fa-solid fa-magnifying-glass"></i></span></a>
+								<a href="#"><span><i class="fa-regular fa-heart" style=" font-size: large;"></i></span></a>
+								<a href="#" class="px-3"><span ><i class="fa-solid fa-bag-shopping" id="cartIcon" style=" font-size: large;"></i></span></a>
+								<a href="#"><span><i class="fa-solid fa-magnifying-glass" style=" font-size: large;"></i></span></a>
 							</li>
 						</ul>
 					</div>
@@ -83,7 +85,78 @@
 			</div>
 		</div>
 	</div>
+	<!-- <div class="container-fluide"> -->
+	<div class="position-absolute row w-100 " style="z-index: 5; display:none">
+		<div class="col-md-6" style="
+    background: #3e3e3e9e;
+    z-index: 5;
+"></div>
+		<div class="border col-md-6 pr-0 rounded-left box_shadow" style="height: calc( 100vh - 82px);z-index: 5;background: white;">
+			<div class="cart">
+				<div class="mb-3 pb-2 pt-3 mt-3 px-3 row" style="background-color: #f7f7f7;">
+					<div class="col-md-12 " style="line-height: 50px;">
+						<h3 class="selectedCategry">My Cart <a href="./vegetables.php" class="small" style="color: #797979c7;">( 4 Items )</a></h3>
+					</div>
+				</div>
+			</div>
+			<div class="product px-4">
+				<div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="align-items-center border mb-3 justify-content-around">
+					<div class="align-items-center row">
+						<div class="col-3">
+							<img src="./images/cat-img4.jpg" alt="" class="w-100" style=" border-radius: 9px;">
+						</div>
+						<div class="col-5 pl-0">
+							<h5 class="h5 ">Watermelon <span class="green_color mb-1 weight ">( 500 gm ) </span></h5>
+							<h5 class="Price"><span class=""><span class="green_color"><i class="fa-indian-rupee-sign fa-solid mr-1"></i>100</span></span></h5>
+						</div>
+						<div class="col-4 text-right">
+							<div class="">
+								<span class=""><i class="fa-solid fa-trash-can" style="font-size: large;"></i></span>
+								<div class="mt-3">
+									<button class="border-secondary btn btn-sm green_bgcolor text-light" type="button" style="letter-spacing: 1px;"> <i class="fa-solid fa-minus text-light"></i> </button>
+									<button class="btn btn-sm text-dark" type="button" style="letter-spacing: 1px;">10</button>
+									<button class="border-secondary btn btn-sm green_bgcolor text-light" type="button" style="letter-spacing: 1px;"> <i class="fa-solid fa-plus text-light"></i> </button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="align-items-center border mb-3 justify-content-around">
+					<div class="align-items-center row">
+						<div class="col-3">
+							<img src="./images/cat-img4.jpg" alt="" class="w-100" style=" border-radius: 9px;">
+						</div>
+						<div class="col-5 pl-0">
+							<h5 class="h5 ">Watermelon <span class="green_color mb-1 weight ">( 500 gm ) </span></h5>
+							<h5 class="Price"><span class=""><span class="green_color"><i class="fa-indian-rupee-sign fa-solid mr-1"></i>100</span></span></h5>
+						</div>
+						<div class="col-4 text-right">
+							<div class="">
+								<span class=""><i class="fa-solid fa-trash-can" style="font-size: large;"></i></span>
+								<div class="mt-3">
+									<button class="border-secondary btn btn-sm green_bgcolor text-light" type="button" style="letter-spacing: 1px;"> <i class="fa-solid fa-minus text-light"></i> </button>
+									<button class="btn btn-sm text-dark" type="button" style="letter-spacing: 1px;">10</button>
+									<button class="border-secondary btn btn-sm green_bgcolor text-light" type="button" style="letter-spacing: 1px;"> <i class="fa-solid fa-plus text-light"></i> </button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+
+			</div>
+
+
+
+		</div>
+	</div>
+	</div>
+
+	<!-- </div> -->
 </body>
+
 <script src="./node_modules/izitoast/dist/js/iziToast.min.js"></script>
 <script>
 

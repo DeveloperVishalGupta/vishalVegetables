@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
+<style>
+	.box_shadow_with_padding .owl-carousel button .next-slide {
+    top: -14% !important;
+    right: 0% !important;
+}
+.box_shadow_with_padding .owl-carousel button .prev-slide {
+    top: -14% !important;
+    right: 11% !important;
+}
+	    .owl-carousel button .next-slide {
+    top: -31% !important;
+    right: 1% !important;
+}
+.owl-carousel button .prev-slide {
+    top: -31% !important;
+    right: 6% !important;
+}
+</style>
 
 <body>
 
 	<!-- header  -->
-		<?php include_once("header.php") ?>
+	<?php include_once("header.php") ?>
 	<!-- // header  -->
 
 </body>
@@ -16,10 +33,8 @@
 		<div class="col-md-12 position-relative imgcontainer">
 			<img src="./images/slider1-img1.png" class=" imageslide position-absolute s1i1" alt="">
 			<img src="./images/slider1-img2.png" class=" imageslide position-absolute s1i2" alt="">
-			<img src="./images/slider1-img3.png"
-				class="imageslide position-absolute s1i3 animate__animated animate__fadeInDown" alt="">
-			<img src="./images/slider1-img4.png"
-				class="imageslide position-absolute s1i4 animate__animated animate__fadeInLeft" alt="">
+			<img src="./images/slider1-img3.png" class="imageslide position-absolute s1i3 animate__animated animate__fadeInDown" alt="">
+			<img src="./images/slider1-img4.png" class="imageslide position-absolute s1i4 animate__animated animate__fadeInLeft" alt="">
 		</div>
 	</div>
 </div>
@@ -58,24 +73,30 @@
 
 <!-- vegetables categray carousel  -->
 <div class="container-fluid mb-5">
-	<div class="d-flex">
-		<h5>Vegetables</h5>
-		<p class="mb-0 ml-3"> <a href="./vegetables.php">( View All )</a></p>
+	<div class="mb-3 pb-2 pt-3 mt-3 px-3 row" style="background-color: #f7f7f7;">
+		<div class="col-md-12 " style="line-height: 50px;">
+			<h3 class="selectedCategry">Vegetables <a href="./vegetables.php" class="small" style="color: #797979c7;">( View All )</a></h3>
+		</div>
 	</div>
+	
 	<div class="owl-carousel owl-theme my-4 productCarousel" id="owl_carousel_vegetables"></div>
 </div>
 <div class="container-fluid mb-5">
-	<div class="d-flex">
-		<h5>Fruits</h5>
-		<p class="mb-0 ml-3"> <a href="./Fruits.php">( View All )</a></p>
+<div class="mb-3 pb-2 pt-3 mt-3 px-3 row" style="background-color: #f7f7f7;">
+		<div class="col-md-12 " style="line-height: 50px;">
+			<h3 class="selectedCategry">Fruits <a href="./vegetables.php" class="small" style="color: #797979c7;">( View All )</a></h3>
+		</div>
 	</div>
-	<div class="owl-carousel owl-theme my-4 productCarousel" id="owl_carousel_fruits">	</div>
+	
+	<div class="owl-carousel owl-theme my-4 productCarousel" id="owl_carousel_fruits"> </div>
 </div>
 <div class="container-fluid mb-5">
-	<div class="d-flex">
-		<h5>Herbs</h5>
-		<p class="mb-0 ml-3"> <a href="./herbs.php">( View All )</a></p>
+<div class="mb-3 pb-2 pt-3 mt-3 px-3 row" style="background-color: #f7f7f7;">
+		<div class="col-md-12 " style="line-height: 50px;">
+			<h3 class="selectedCategry">Herbs <a href="./vegetables.php" class="small" style="color: #797979c7;">( View All )</a></h3>
+		</div>
 	</div>
+	
 	<div class="owl-carousel owl-theme my-4 productCarousel" id="owl_carousel_hearbs">
 		<!-- 
 		<div class="item p-2">
@@ -104,7 +125,7 @@
 	<div class="row">
 		<div class="col-md-6 position-relative">
 			<div class=" ">
-				<img src="./images/mobile_Screenshot_2.png"  style="width: 27%; left: 14%; top:3%;" class="position-absolute" alt="">
+				<img src="./images/mobile_Screenshot_2.png" style="width: 27%; left: 14%; top:3%;" class="position-absolute" alt="">
 				<img src="./images/mobile_Screenshot_3.png" style="width: 27%; right: 14%; top:3%;" class="position-absolute" alt="">
 				<img src="./images/mobile_Screenshot_1.png" style="width: 27%; left: 36.5%; top: 10%;" class="position-absolute" alt="">
 			</div>
@@ -116,9 +137,9 @@
 				<div class="green_bgcolor border appstore border-secondary" id="playStore" style="animation-duration: .5s !important;">
 					<span class=""><i class="fa-brands fa-google-play text-dark"></i></span><span class="pl-2 text-dark">Play Store</span>
 				</div>
-					<div class="appstore" id="appleStore" style="animation-duration: .5s !important; ">
-						<span><i class="fa-brands fa-apple text-dark" style="font-size: larger;"></i></span><span class="pl-2 text-dark">Apple Store</span>
-					</div> 	 	
+				<div class="appstore" id="appleStore" style="animation-duration: .5s !important; ">
+					<span><i class="fa-brands fa-apple text-dark" style="font-size: larger;"></i></span><span class="pl-2 text-dark">Apple Store</span>
+				</div>
 			</div>
 			<input type="text" placeholder="Enter Your Mobile Number..." class="mx-auto w-75 badge-pill border-secondary form-control mt-4 px-4 py-2">
 			<div class="mt-4 text-center">
@@ -137,27 +158,15 @@
 <!-- custom javascript link  -->
 <script src="./js/javascript.js"></script>
 <!-- boostrap javascript cdn  -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-	integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-	crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-	integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-	crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-	integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-	crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <!-- jquery cdn  -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-	integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <!-- owl carousel cdn  -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-	integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
-	integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
-	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script>
 	$('.bestSelling').owlCarousel({
@@ -209,13 +218,12 @@
 			},
 			1024: {
 				items: 4
-			}, 1440: {
+			},
+			1440: {
 				items: 5
 			}
 		}
 	});
-		 
-
 </script>
 
 </html>
