@@ -201,9 +201,8 @@ return productList;
 
  //===================================================== cart details page js =====================================================
  $("#cartIcon").click(function(){
-    console.log("|thi =s id red");
-
     $(this).toggleClass('green_color');
+    $("#Soppingcart").toggleClass('d-none');
  });
 
  //===================================================== ./ cart details page js =====================================================

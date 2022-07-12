@@ -60,7 +60,7 @@
                                 </span>
                             </h5>
                             <p class="green_color mb-1 weight text-muted">1 Kg </p>
-                            <input type="radio" class="radio-btn" name="productWeight" id="">
+                            <input type="radio" class="radio-btn" name="productWeight" id="">   
                         </div>
                     </div>
                     <div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="border mb-3">
@@ -94,38 +94,48 @@
                 </div>
             </div>
         </div>
-
+       
     </div>
     <div class="container-fluid">
-        <div class="mb-3 pb-2 pt-3 mt-3 px-5 row" style="background-color: #f7f7f7;">
+    <div class="mb-3 pb-2 pt-3 mt-3 px-5 row" style="background-color: #f7f7f7;">
             <div class="col-md-12 " style="line-height: 50px;">
-                <h3 class="selectedCategry">Suggestion <a href="./vegetables.php" class="small" style="color: #797979c7;">( View All )</a></h3>
+                <h3 class="selectedCategry">Suggestion</h3>
+                <div class="owl-carousel owl-theme my-4 productCarousel" id="SuggestionProductCarousel">
+		<!-- 
+		<div class="item p-2">
+			<div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="border">
+				<img src="./images/cat-img4.jpg" alt="" width="300px" style=" border-radius: 9px;">
+				<div class="d-flex">
+					<h4 class="h5 pl-3 pr-2">Watermelon</h4>
+					<p class="green_color mb-1 weight text-muted">( 500 gm ) </p>
+
+				</div>
+				<div class="align-items-center d-flex justify-content-between px-4">
+					<div class="">
+						<h5 class="Price"><span class=""><span class="green_color"><i
+										class="fa-indian-rupee-sign fa-solid mr-1"></i>100</span></span></h5>
+					</div>
+					<button class="border-secondary btn btn-sm green_bgcolor px-4 text-light" type="button"
+						style="letter-spacing: 1px;">Add</button>
+				</div>
+			</div>
+		</div> -->
+	</div>
             </div>
         </div>
-	<div class="owl-carousel owl-theme my-4 suggestionproductCarousel" id="suggestionproductCarousel"></div>
-
     </div>
 
 </body>
-<?php include_once("./footer.php") ?>
-<!-- owl carousel cdn  -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-	integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
-	integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
-	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
 <script src="./js/javascript.js"></script>
 <script>
-    $('.suggestionproductCarousel').owlCarousel({
+    $('#SuggestionProductCarousel').owlCarousel({
 		loop: true,
-		navigation: true,
+		// margin: 10,
 		padding: 10,
 		nav: true,
 		navText: ["<div class='align-items-center d-flex justify-content-center px-2 nav-btn prev-slide prenavigate'> <i class='fa-solid fa-caret-left'></i></div>", "<div class='align-items-center d-flex justify-content-center px-2 nav-btn next-slide postnavigate'> <i class='fa-solid fa-caret-right'></i></div>"],
 
-		autoplay: true,
+		autoplay: false,
 		autoplayTimeout: 3000,
 		autoplayHoverPause: true,
 		smartSpeed: 1300,

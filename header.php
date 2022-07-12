@@ -86,7 +86,7 @@
 		</div>
 	</div>
 	<!-- <div class="container-fluide"> -->
-	<div class="position-absolute row w-100 " style="z-index: 5; display:none">
+	<div class="position-absolute row w-100 d-none " id="Soppingcart" style="z-index: 5; ">
 		<div class="col-md-6" style="
     background: #3e3e3e9e;
     z-index: 5;
