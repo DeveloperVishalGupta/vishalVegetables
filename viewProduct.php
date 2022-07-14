@@ -2,14 +2,66 @@
 <html lang="en">
 <style>
     .owl-carousel button .next-slide {
-    top: -31% !important;
-    right: 1% !important;
+        top: -31% !important;
+        right: 1% !important;
+    }
+
+    .owl-carousel button .prev-slide {
+        top: -31% !important;
+        right: 6% !important;
+    }
+    
+ul li{
+  display: block;
+  position: relative;
 }
-.owl-carousel button .prev-slide {
-    top: -31% !important;
-    right: 6% !important;
+
+ul li input[type=radio]{
+  position: absolute;
+  visibility: hidden;
+}
+
+ul li label{
+  display: inline-block;
+  position: relative;
+  padding: 25px 15px 5px 0px;
+  z-index: 9;
+  cursor: pointer;
+  -webkit-transition: all 0.25s linear;
+}
+
+ul li .check{
+  position: absolute;
+  border: 3px solid #AAAAAA;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  top: 30px;
+	transition: border .25s linear;
+	-webkit-transition: border .25s linear;
+}
+ul li .check::before {
+  display: block;
+  position: absolute;
+	content: '';
+  border-radius: 100%;
+  height: 9px;
+  width: 9px;
+  top: 2.5px;
+	left: 2.5px;
+	transition: background 0.25s linear;
+	-webkit-transition: background 0.25s linear;
+}
+
+input[type=radio]:checked ~ .check {
+  border: 3px solid #0DFF92;
+}
+
+input[type=radio]:checked ~ .check::before{
+  background: #0DFF92;
 }
 </style>
+
 <body>
     <!-- header  -->
     <?php include_once("./header.php") ?>
@@ -60,20 +112,6 @@
                                 </span>
                             </h5>
                             <p class="green_color mb-1 weight text-muted">1 Kg </p>
-                            <input type="radio" class="radio-btn" name="productWeight" id="">   
-                        </div>
-                    </div>
-                    <div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="border mb-3">
-                        <div class="align-items-center d-flex justify-content-around ">
-                            <img src="./images/2-watermelon.jpg" alt="" class="" style="width: 75px;">
-                            <h5 class="Price">
-                                <span class="">
-                                    <span class="green_color">
-                                        <i class="fa-indian-rupee-sign fa-solid mr-1"></i>
-                                        100</span>
-                                </span>
-                            </h5>
-                            <p class="green_color mb-1 weight text-muted">1 Kg </p>
                             <input type="radio" class="radio-btn" name="productWeight" id="">
                         </div>
                     </div>
@@ -88,20 +126,46 @@
                                 </span>
                             </h5>
                             <p class="green_color mb-1 weight text-muted">1 Kg </p>
-                            <input type="radio" class="radio-btn" name="productWeight" id="">
+                            <ul>
+  <li>
+    <input type="radio" id="f-option" name="selector">
+    <label for="f-option">.</label>
+    
+    <div class="check"></div>
+  </li>
+                        </div>
+                    </div>
+                    <div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="border mb-3">
+                        <div class="align-items-center d-flex justify-content-around ">
+                            <img src="./images/2-watermelon.jpg" alt="" class="" style="width: 75px;">
+                            <h5 class="Price">
+                                <span class="">
+                                    <span class="green_color">
+                                        <i class="fa-indian-rupee-sign fa-solid mr-1"></i>
+                                        100</span>
+                                </span>
+                            </h5>
+                            <p class="green_color mb-1 weight text-muted">1 Kg </p>
+                            <ul>
+  <li>
+    <input type="radio" id="f-option" name="selector">
+    <label for="f-option">.</label>
+    
+    <div class="check"></div>
+  </li>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-       
+
     </div>
     <div class="container-fluid">
-    <div class="mb-3 pb-2 pt-3 mt-3 px-5 row" style="background-color: #f7f7f7;">
+        <div class="mb-3 pb-2 pt-3 mt-3 px-5 row" style="background-color: #f7f7f7;">
             <div class="col-md-12 " style="line-height: 50px;">
                 <h3 class="selectedCategry">Suggestion</h3>
                 <div class="owl-carousel owl-theme my-4 productCarousel" id="SuggestionProductCarousel">
-		<!-- 
+                    <!-- 
 		<div class="item p-2">
 			<div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="border">
 				<img src="./images/cat-img4.jpg" alt="" width="300px" style=" border-radius: 9px;">
@@ -120,42 +184,70 @@
 				</div>
 			</div>
 		</div> -->
-	</div>
+                </div>
             </div>
         </div>
     </div>
+    <div class="">
+    <ul>
+  <li>
+    <input type="radio" id="f-option" name="selector">
+    <label for="f-option">.</label>
+    
+    <div class="check"></div>
+  </li>
+  
+  <li>
+    <input type="radio" id="s-option" name="selector">
+    <label for="s-option">.</label>
+    
+    <div class="check"><div class="inside"></div></div>
+  </li>
+  
+  <li>
+    <input type="radio" id="t-option" name="selector">
+    <label for="t-option">.</label>
+    
+    <div class="check"><div class="inside"></div></div>
+  </li>
+</ul>
+
+    </div>  
+
+
 
 </body>
 <script src="./js/javascript.js"></script>
 <script>
     $('#SuggestionProductCarousel').owlCarousel({
-		loop: true,
-		// margin: 10,
-		padding: 10,
-		nav: true,
-		navText: ["<div class='align-items-center d-flex justify-content-center px-2 nav-btn prev-slide prenavigate'> <i class='fa-solid fa-caret-left'></i></div>", "<div class='align-items-center d-flex justify-content-center px-2 nav-btn next-slide postnavigate'> <i class='fa-solid fa-caret-right'></i></div>"],
+        loop: true,
+        // margin: 10,
+        padding: 10,
+        nav: true,
+        navText: ["<div class='align-items-center d-flex justify-content-center px-2 nav-btn prev-slide prenavigate'> <i class='fa-solid fa-caret-left'></i></div>", "<div class='align-items-center d-flex justify-content-center px-2 nav-btn next-slide postnavigate'> <i class='fa-solid fa-caret-right'></i></div>"],
 
-		autoplay: false,
-		autoplayTimeout: 3000,
-		autoplayHoverPause: true,
-		smartSpeed: 1300,
-		responsive: {
-			0: {
-				items: 1
-			},
-			500: {
-				items: 1
-			},
-			768: {
-				items: 3
-			},
-			1024: {
-				items: 4
-			}, 1440: {
-				items: 5
-			}
-		}
-	});
+        autoplay: false,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        smartSpeed: 1300,
+        responsive: {
+            0: {
+                items: 1
+            },
+            500: {
+                items: 1
+            },
+            768: {
+                items: 3
+            },
+            1024: {
+                items: 4
+            },
+            1440: {
+                items: 5
+            }
+        }
+    });
 </script>
 
 </html>
