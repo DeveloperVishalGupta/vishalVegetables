@@ -44,7 +44,7 @@
 		<div class="row shadow menu">
 			<div class="col-md-2">
 				<div class="logo text-center">
-					<img src="./images/logo.png" style="width: 45%;" alt="Vishal">
+					<a href="./index.php"><img src="./images/logo.png" style="width: 45%;" alt="Vishal"></a>
 				</div>
 			</div>
 			<div class="col-md-10 pr-0">
@@ -52,8 +52,7 @@
 					<div class="align-items-center col-md-12 d-flex justify-content-between pl-5 pr-4">
 						<div class="conntact d-flex">
 							<div class="contactNumber mr-4">
-								<span class="mr-2"><i class="fa-solid fa-phone text-light"></i></span><span class="text-light">+91
-									9320206598</span>
+								<span class="mr-2"><a href="#" style="text-decoration: none ;"><i class="fa-solid fa-phone text-light"></i></span><span class="text-light">+91 9320206598</a></span>
 							</div>
 							<div class="contactEmail">
 								<span class="mr-2"><i class="fa-solid fa-paper-plane text-light"></i></span><span class="text-light">vishalvvramasare@gmail.com</span>
