@@ -10,56 +10,53 @@
         top: -31% !important;
         right: 6% !important;
     }
-    
-ul li{
-  display: block;
-  position: relative;
-}
+</style>
+<style>
+    /* The container */
+    .radioBtn {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    }
 
-ul li input[type=radio]{
-  position: absolute;
-  visibility: hidden;
-}
+    /* Hide the browser's default radio button */
+    .radioBtn input {
+        opacity: 0;
+        cursor: pointer;
+    }
 
-ul li label{
-  display: inline-block;
-  position: relative;
-  padding: 25px 15px 5px 0px;
-  z-index: 9;
-  cursor: pointer;
-  -webkit-transition: all 0.25s linear;
-}
+    /* Create a custom radio button */
+    .checkmark {
+        top: -9px;
+        left: -19px;
+        height: 20px;
+        width: 20px;
+        border: 3px solid #1ab293;
+    }
 
-ul li .check{
-  position: absolute;
-  border: 3px solid #AAAAAA;
-  border-radius: 50%;
-  height: 15px;
-  width: 15px;
-  top: 30px;
-	transition: border .25s linear;
-	-webkit-transition: border .25s linear;
-}
-ul li .check::before {
-  display: block;
-  position: absolute;
-	content: '';
-  border-radius: 100%;
-  height: 9px;
-  width: 9px;
-  top: 2.5px;
-	left: 2.5px;
-	transition: background 0.25s linear;
-	-webkit-transition: background 0.25s linear;
-}
+    /* Create the indicator (the dot/circle - hidden when not checked) */
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
 
-input[type=radio]:checked ~ .check {
-  border: 3px solid #0DFF92;
-}
+    /* Show the indicator (dot/circle) when checked */
+    .radioBtn input:checked~.checkmark:after {
+        display: block;
+    }
 
-input[type=radio]:checked ~ .check::before{
-  background: #0DFF92;
-}
+    /* Style the indicator (dot/circle) */
+    .radioBtn .checkmark:after {
+        top: 3px;
+        left: 3px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #1ab293;
+    }
 </style>
 
 <body>
@@ -98,7 +95,10 @@ input[type=radio]:checked ~ .check::before{
                                 </span>
                             </h5>
                             <p class="green_color mb-1 weight text-muted">1 Kg </p>
-                            <input type="radio" class="radio-btn" name="productWeight" id="">
+                            <label class="position-relative radioBtn">
+                                <input type="radio" name="radio" class="position-absolute">
+                                <span class="checkmark position-absolute rounded-circle"></span>
+                            </label>
                         </div>
                     </div>
                     <div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="border mb-3">
@@ -112,7 +112,10 @@ input[type=radio]:checked ~ .check::before{
                                 </span>
                             </h5>
                             <p class="green_color mb-1 weight text-muted">1 Kg </p>
-                            <input type="radio" class="radio-btn" name="productWeight" id="">
+                            <label class="position-relative radioBtn">
+                                <input type="radio" name="radio" class="position-absolute">
+                                <span class="checkmark position-absolute rounded-circle"></span>
+                            </label>
                         </div>
                     </div>
                     <div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="border mb-3">
@@ -126,13 +129,11 @@ input[type=radio]:checked ~ .check::before{
                                 </span>
                             </h5>
                             <p class="green_color mb-1 weight text-muted">1 Kg </p>
-                            <ul>
-  <li>
-    <input type="radio" id="f-option" name="selector">
-    <label for="f-option">.</label>
-    
-    <div class="check"></div>
-  </li>
+                            <label class="position-relative radioBtn">
+                                <input type="radio" name="radio" class="position-absolute">
+                                <span class="checkmark position-absolute rounded-circle"></span>
+                            </label>
+
                         </div>
                     </div>
                     <div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="border mb-3">
@@ -146,13 +147,11 @@ input[type=radio]:checked ~ .check::before{
                                 </span>
                             </h5>
                             <p class="green_color mb-1 weight text-muted">1 Kg </p>
-                            <ul>
-  <li>
-    <input type="radio" id="f-option" name="selector">
-    <label for="f-option">.</label>
-    
-    <div class="check"></div>
-  </li>
+                            <label class="position-relative radioBtn">
+                                <input type="radio" checked="checked" class="position-absolute" name="radio">
+                                <span class="checkmark position-absolute rounded-circle"></span>
+                            </label>
+
                         </div>
                     </div>
                 </div>
@@ -165,7 +164,7 @@ input[type=radio]:checked ~ .check::before{
             <div class="col-md-12 " style="line-height: 50px;">
                 <h3 class="selectedCategry">Suggestion</h3>
                 <div class="owl-carousel owl-theme my-4 productCarousel" id="SuggestionProductCarousel">
-                    <!-- 
+                    
 		<div class="item p-2">
 			<div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="border">
 				<img src="./images/cat-img4.jpg" alt="" width="300px" style=" border-radius: 9px;">
@@ -183,39 +182,11 @@ input[type=radio]:checked ~ .check::before{
 						style="letter-spacing: 1px;">Add</button>
 				</div>
 			</div>
-		</div> -->
+		</div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="">
-    <ul>
-  <li>
-    <input type="radio" id="f-option" name="selector">
-    <label for="f-option">.</label>
-    
-    <div class="check"></div>
-  </li>
-  
-  <li>
-    <input type="radio" id="s-option" name="selector">
-    <label for="s-option">.</label>
-    
-    <div class="check"><div class="inside"></div></div>
-  </li>
-  
-  <li>
-    <input type="radio" id="t-option" name="selector">
-    <label for="t-option">.</label>
-    
-    <div class="check"><div class="inside"></div></div>
-  </li>
-</ul>
-
-    </div>  
-
-
-
 </body>
 <script src="./js/javascript.js"></script>
 <script>

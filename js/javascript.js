@@ -175,28 +175,34 @@ return productList;
      calltoster('Like', "Added to Favirate", "green" )
  })
 
-//  const productQuentityArray=[{}]
-//  for (let i = 0; i < 4; i++) {
+ const productQuentityArray=[ {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli", MRP:"30", sellingPrice:"25"},
+ {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli", MRP:"30", sellingPrice:"25"},
+ {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli", MRP:"30", sellingPrice:"25"},
+ {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli", MRP:"30", sellingPrice:"25"},
+ {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli", MRP:"30", sellingPrice:"25"},
+ {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli", MRP:"30", sellingPrice:"25"},
+ {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli", MRP:"30", sellingPrice:"25"}]
+ for (let i = 0; i < 4; i++) {
      
-//      productQuentity('1kg', '750 gm', '500 gm', '250 gm')
-//  }
-//  function productQuentity(qt1,qt2,qt3,qt4) {
-//     var productQuentityList = `<div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="border">
-//     <div class="align-items-center d-flex justify-content-around ">
-//         <img src="./images/2-watermelon.jpg" alt="" class="" style="width: 75px;">
-//         <h5 class="Price">
-//             <span class="">
-//                 <span class="green_color">
-//                     <i class="fa-indian-rupee-sign fa-solid mr-1"></i>
-//                     100</span>
-//             </span>
-//         </h5>
-//         <p class="green_color mb-1 weight text-muted">1 Kg </p>
-//         <input type="radio" class="radio-btn" name="productWeight" id="">
-//     </div>
-// </div>`;
-// $("#ProductQuentity").append(productQuentityList);
-//  }
+     productQuentity('1kg', '750 gm', '500 gm', '250 gm')
+ }
+ function productQuentity(qt1,qt2,qt3,qt4) {
+    var productQuentityList = `<div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="border">
+    <div class="align-items-center d-flex justify-content-around ">
+        <img src="./images/2-watermelon.jpg" alt="" class="" style="width: 75px;">
+        <h5 class="Price">
+            <span class="">
+                <span class="green_color">
+                    <i class="fa-indian-rupee-sign fa-solid mr-1"></i>
+                    100</span>
+            </span>
+        </h5>
+        <p class="green_color mb-1 weight text-muted">1 Kg </p>
+        <input type="radio" class="radio-btn" name="productWeight" id="">
+    </div>
+</div>`;
+$("#ProductQuentity").append(productQuentityList);
+ }
  //===================================================== ./ viewproduct details page js =====================================================
 
  //===================================================== cart details page js =====================================================
