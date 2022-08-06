@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+	session_start()
+?><!DOCTYPE html>
 <html lang="en">
 
 <style>
@@ -121,13 +123,14 @@
 </div>
 
 <!--mobile app  application section  -->
-<div class="container-fluid " style="height:450px;">
+<div class="container-fluid mb-5" style="height:450px;">
 	<div class="row">
 		<div class="col-md-6 position-relative">
-			<div class=" ">
-				<img src="./images/mobile_Screenshot_2.png" style="width: 27%; left: 14%; top:3%;" class="position-absolute" alt="">
-				<img src="./images/mobile_Screenshot_3.png" style="width: 27%; right: 14%; top:3%;" class="position-absolute" alt="">
-				<img src="./images/mobile_Screenshot_1.png" style="width: 27%; left: 36.5%; top: 10%;" class="position-absolute" alt="">
+		<div class="text-center ">
+				<!-- <img src="./images/mobile_Screenshot_2.png" style="width: 27%;left: 16%; top:3%;max-width: 180px;" class="position-absolute" alt="">
+				<img src="./images/mobile_Screenshot_3.png" style="width: 27%;right: 16%; top:3%;max-width: 180px;" class="position-absolute" alt="">
+				<img src="./images/mobile_Screenshot_1.png" style="width: 27%;left: 37.5%;top: 10%;max-width: 180px;" class="position-absolute" alt=""> -->
+				<img src="./images/mobileAppImage.png" class="w-75" alt="">
 			</div>
 		</div>
 		<div class="col-md-6 pt-5">

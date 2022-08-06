@@ -1,0 +1,8 @@
+/* CSS for all  */
+
+.form-control:focus,
+.btn:focus {
+    outline: none;
+    box-shadow: none !important;
+    /* border: black; */
+}
