@@ -1,3 +1,8 @@
+:root{
+    --greenTheme: #1ab293;
+    --LightgreenTheme: #c1f8ed;
+}
+
 /* CSS for all  */
 
 .form-control:focus,
@@ -5,4 +10,16 @@
     outline: none;
     box-shadow: none !important;
     /* border: black; */
+}
+.dropdown-item:active, .dropdown-item:hover {
+    color: #000 !important;
+    font-weight: 600;
+    background-color: var(--LightgreenTheme) !important;
+    text-decoration: none;
+}
+.AddProductBtn{
+    background-color: var(--greenTheme);
+}
+.btn:active{
+    background-color: #4ae5c6;
 }
