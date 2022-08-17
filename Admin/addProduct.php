@@ -74,36 +74,6 @@ session_start();
 	}
 	?>
 
-	<?php
-	// include '../DBConnection/dbconnection.php';
-	// if (isset($_POST['submit'])) {
-	// 	$productImage = mysqli_real_escape_string($connection, $_POST['ProductImage']);
-	// 	$productName = mysqli_real_escape_string($connection, $_POST['ProductName']);
-	// 	$productWeight = mysqli_real_escape_string($connection, $_POST['ProductWeight']);
-	// 	$productPrice = mysqli_real_escape_string($connection, $_POST('ProductPrice'));
-	// 	$productQuantity = mysqli_real_escape_string($connection, $_POST['ProductQuantity']);
-
-	// $ProductInsertQuery = "insert into vegetablesproduct (ProductImage,	ProductName, ProductWeight,	ProdcutPrice, ProductQuantity) value ('$productImage', '$productName','$productWeight','$productPrice','$productQuantity')";
-	// $InsertToDB = mysqli_query($connection, $ProductInsertQuery);
-	// var_dump($ProductInsertQuery);
-
-	// if ($inser_to_db) {
-	?>
-	<!-- <script>
-					alert("inserted successful");
-				</script> -->
-	<?php
-	// } else {
-	?>
-	<!-- <script>
-					alert("inserted unsuccessful");
-				</script> -->
-	<?php
-	// 	}
-	// }
-
-	?>
-
 
 	<!-- Button trigger modal -->
 	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
