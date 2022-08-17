@@ -96,6 +96,13 @@ session_start();
 						<label for="FruitsProductImage" class="font-weight-bold w-100">Image
 							<input required type="file" style="font-weight: 500; font-style: italic;" name="ProductImage" id="FruitsProductImage" class="form-control">
 						</label>
+						<select name="ProductCategry" required id="ProductCategry">
+							<option value="">250gm</option>
+							<option value="">500gm</option>
+							<option value="">750gm</option>
+							<option value="">1Kg</option>
+							<option value="">2Kg</option>
+						</select>
 
 						<label for="FruitsProductName" class="font-weight-bold w-100"> Name
 							<input required type="text" name="ProductName" id="FruitsProductName" class="form-control">
