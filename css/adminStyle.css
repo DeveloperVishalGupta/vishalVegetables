@@ -1,6 +1,10 @@
 :root{
     --greenTheme: #1ab293;
     --LightgreenTheme: #c1f8ed;
+    --whiteColor:#fff;
+    --backColor:#000;
+    --midiumFontWeight :500;
+    --textLightGray: rgb(163, 160, 160);
 }
 
 /* CSS for all  */
@@ -10,6 +14,9 @@
     outline: none;
     box-shadow: none !important;
     /* border: black; */
+}
+.row{
+    margin: 0 !important;
 }
 .dropdown-item:active, .dropdown-item:hover {
     color: #000 !important;
@@ -22,4 +29,15 @@
 }
 .btn:active{
     background-color: #4ae5c6;
+}
+.mediumFontWeight{
+    font-weight: var(--midiumFontWeight);
+}
+.textLightGray{
+    color: var(--textLightGray);
+}
+.menuList:hover{
+ background-color: var(--LightgreenTheme);
+ color: var(--BlackColor);
+ font-weight: var(--midiumFontWeight);
 }
