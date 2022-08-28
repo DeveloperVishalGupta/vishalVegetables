@@ -78,7 +78,7 @@
             </section>
         </div>
         <div class="col-lg-10 col-md-9 bg-white rounded">
-            <div class="align-items-center mx-0 row">
+            <div class="align-items-center mx-0 row mb-5">
                 <div class="col-md-4">
                     <h4 class="mb-0">Dashboard</h4>
                     <p class="mb-0 small textLightGray">Everything here</p>
@@ -101,15 +101,29 @@
                     <div class="row">
                         <div class="col-7">
                             <div class="saleReport">
-                                <h6>Sale Reports</h6>
+                                <h6 class="mb-4">Sale Reports</h6>
+                                <div class="d-flex">
+                                <p class='mb-0 pr-2'>Showing for : </p>
+                                    <div class="" style="font-weight: 500;">
+                                    
+                                    <span class="mr-2"><i class="fa-solid fa-calendar-days"></i></span>
+                                    <span class="firstDate">aug 24 - </span>
+                                    <span class="LastDate">aug 29</span>
+                                    <span class="currentYear">2022</span>
+                                    </div>
+                                </div>
+                                                            
                                 <div>
-                                    <canvas id="myChart" width="400" height="400"></canvas>
+                                    <canvas id="saleReportsChart" width="400" height="400"></canvas>
                                 </div>
                             </div>
                         </div>
                         <div class="col-5">
                             <div class="Earning">
                                 <h6>Earning</h6>
+                                <div>
+                                    <canvas id="saleReportsChart" width="400" height="400"></canvas>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -122,31 +136,72 @@
 <script src="../node_modules/chart.js/dist/chart.js"></script>
 <script src="../js/adminJs.js"></script>
 <script>
-    const ctx = document.getElementById('myChart').getContext('2d');
+    // line graph 
+    const ctx = document.getElementById('saleReportsChart').getContext('2d');
     const myChart = new Chart(ctx, {
-        type: 'bar',
+        type: 'line',
         data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            labels: ['Jan', 'Fab', 'March', 'April', 'June', 'July'],
             datasets: [{
-                label: '# of Votes',
+                label: 'Sale Reports    ',
                 data: [12, 19, 3, 5, 2, 3],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
+                // backgroundColor: [
+                //     'red',
+                //     'rgba(54, 162, 235, 0.2)',
+                //     'rgba(255, 206, 86, 0.2)',
+                //     'rgba(75, 192, 192, 0.2)',
+                //     'rgba(153, 102, 255, 0.2)',
+                //     'rgba(255, 159, 64, 0.2)'
+                // ],
                 borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
+                    '#1ab293',
+                    'red','red','red','red','red'
+                    // 'rgba(54, 162, 235, 1)',
+                    // 'rgba(255, 206, 86, 1)',
+                    // 'rgba(75, 192, 192, 1)',
+                    // 'rgba(153, 102, 255, 1)',
+                    // 'rgba(255, 159, 64, 1)'
                 ],
-                borderWidth: 1
+                borderWidth: 2
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    //  doneut graph 
+    
+    const ctx = document.getElementById('saleReportsChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Jan', 'Fab', 'March', 'April', 'June', 'July'],
+            datasets: [{
+                label: 'Sale Reports    ',
+                data: [12, 19, 3, 5, 2, 3],
+                // backgroundColor: [
+                //     'red',
+                //     'rgba(54, 162, 235, 0.2)',
+                //     'rgba(255, 206, 86, 0.2)',
+                //     'rgba(75, 192, 192, 0.2)',
+                //     'rgba(153, 102, 255, 0.2)',
+                //     'rgba(255, 159, 64, 0.2)'
+                // ],
+                borderColor: [
+                    '#1ab293',
+                    'red','red','red','red','red'
+                    // 'rgba(54, 162, 235, 1)',
+                    // 'rgba(255, 206, 86, 1)',
+                    // 'rgba(75, 192, 192, 1)',
+                    // 'rgba(153, 102, 255, 1)',
+                    // 'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 2
             }]
         },
         options: {
