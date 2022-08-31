@@ -66,13 +66,13 @@
                         <li class=" pl-3 py-1 menuList"><span class="mr-2"><i class="fa-solid fa-screwdriver-wrench" style="width: 25px;"></i></span>Setting</li>
                     </ul>
                 </div>
-                <!-- <div class="logo_copywrite position-absolute text-center" style="bottom: 8px;right: 20%;">
+                <div class="logo_copywrite position-absolute text-center d-none d-md-block" style="bottom: 8px;right: 20%;">
                     <img src="../images/logo.png" alt="" class="text-left" style="width: 35%;">
                     <div class="">
                         <p class=" font-weight-bold mb-0 small">@2022 Vishal Gupta</p>
                         <p class="small mb-0">All rights reserved</p>
                     </div>
-                </div> -->
+                </div>
             </section>
         </div>
         <div class="col-lg-10 col-md-9 bg-white rounded">
@@ -127,15 +127,29 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="statisticHeader">
+                    <div class="d-flex justify-content-between statisticHeader">
                         <h6 class="mb-0 ">Statics</h6>
-                        <p class="small mb-0 text-dark mediumFontWeight"><span class="mr-2"><i class="fa-solid fa-calendar-days"></i></span> Last 30 days</p>
+                        <p class="mb-0 mediumFontWeight ml-3 small text-dark"><span class="mr-2"><i class="fa-solid fa-calendar-days"></i></span> Last 30 days</p>
                     </div>
-                    <div class="Order">
+                    <div class="Order align-items-center border d-flex justify-content-around mt-3 rounded" style="background-color: lightcyan;">
                         <span><i class="fa-solid fa-bag-shopping"></i></span>
                         <div class="">
-                            <p>Order</p>
+                            <p class="mb-0">Order</p>
                             <h5>100 <span></span></h5>
+                        </div>
+                    </div>
+                    <div class="Order align-items-center border d-flex justify-content-around mt-3 rounded" style="background-color: lightcyan;">
+                        <span><i class="fa-solid fa-bag-shopping"></i></span>
+                        <div class="">
+                            <p class="mb-0">revenge</p>
+                            <h5>1000 <span></span></h5>
+                        </div>
+                    </div>
+                    <div class="Order align-items-center border d-flex justify-content-around mt-3 rounded" style="background-color: lightcyan;">
+                        <span><i class="fa-solid fa-bag-shopping"></i></span>
+                        <div class="">
+                            <p class="mb-0">Earning</p>
+                            <h5>10000 <span></span></h5>
                         </div>
                     </div>
                     <div class="evenue"></div>
