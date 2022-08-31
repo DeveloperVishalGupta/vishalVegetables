@@ -31,7 +31,7 @@
 
 <body class="bg-light">
     <div class="mx-0 row">
-        <div class="bg-white col-lg-2 col-md-3 rounded" style="height: 100vh;">
+        <div class="bg-white col-lg-2 col-md-3 col-12 rounded adminMenu">
             <section class="MenuSection">
                 <!-- user Details  -->
                 <div class="align-items-center d-flex justify-content-between py-1 userDetails">
@@ -62,19 +62,17 @@
                             <li class=" pl-3 py-1 "><span class="mr-2"><i class="fa-solid fa-chart-line" style="width: 25px;"></i></span>Analysis</li>
                             <span class="badge badge-danger">4</span>
                         </div>
-                        <!-- <li class=" pl-3 py-1 menuList"><span class="mr-2"><i class="" style="width: 25px;"></i></span></li> -->
                         <li class=" pl-3 py-1 menuList"><span class="mr-2"><i class="fa-solid fa-money-check-dollar" style="width: 25px;"></i></span>Payout</li>
                         <li class=" pl-3 py-1 menuList"><span class="mr-2"><i class="fa-solid fa-screwdriver-wrench" style="width: 25px;"></i></span>Setting</li>
-                        <!-- <li><span class="mr-2"><i class="fa-solid fa-braille"></i></span>Dashboard</li> -->
                     </ul>
                 </div>
-                <div class="logo_copywrite position-absolute text-center" style="bottom: 8px;right: 20%;">
+                <!-- <div class="logo_copywrite position-absolute text-center" style="bottom: 8px;right: 20%;">
                     <img src="../images/logo.png" alt="" class="text-left" style="width: 35%;">
                     <div class="">
                         <p class=" font-weight-bold mb-0 small">@2022 Vishal Gupta</p>
                         <p class="small mb-0">All rights reserved</p>
                     </div>
-                </div>
+                </div> -->
             </section>
         </div>
         <div class="col-lg-10 col-md-9 bg-white rounded">
@@ -99,36 +97,50 @@
             <div class="row mx-0">
                 <div class="col-md-8">
                     <div class="row">
-                        <div class="col-7">
+                        <div class="col-12 col-md-7">
                             <div class="saleReport">
                                 <h6 class="mb-4">Sale Reports</h6>
                                 <div class="d-flex">
-                                <p class='mb-0 pr-2'>Showing for : </p>
+                                    <p class='mb-0 pr-2'>Showing for : </p>
                                     <div class="" style="font-weight: 500;">
-                                    
-                                    <span class="mr-2"><i class="fa-solid fa-calendar-days"></i></span>
-                                    <span class="firstDate">aug 24 - </span>
-                                    <span class="LastDate">aug 29</span>
-                                    <span class="currentYear">2022</span>
+
+                                        <span class="mr-2"><i class="fa-solid fa-calendar-days"></i></span>
+                                        <span class="firstDate">aug 24 - </span>
+                                        <span class="LastDate">aug 29</span>
+                                        <span class="currentYear">2022</span>
                                     </div>
                                 </div>
-                                                            
+
                                 <div>
                                     <canvas id="saleReportsChart" width="400" height="400"></canvas>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-5">
+                        <div class="col-12 col-md-5">
                             <div class="Earning">
                                 <h6>Earning</h6>
                                 <div>
-                                    <canvas id="saleReportsChart" width="400" height="400"></canvas>
+                                    <canvas id="earningSaleChart" class="w-100" height="400"></canvas>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <div class="statisticHeader">
+                        <h6 class="mb-0 ">Statics</h6>
+                        <p class="small mb-0 text-dark mediumFontWeight"><span class="mr-2"><i class="fa-solid fa-calendar-days"></i></span> Last 30 days</p>
+                    </div>
+                    <div class="Order">
+                        <span><i class="fa-solid fa-bag-shopping"></i></span>
+                        <div class="">
+                            <p>Order</p>
+                            <h5>100 <span></span></h5>
+                        </div>
+                    </div>
+                    <div class="evenue"></div>
+                    <div class="Earning"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -137,77 +149,73 @@
 <script src="../js/adminJs.js"></script>
 <script>
     // line graph 
-    const ctx = document.getElementById('saleReportsChart').getContext('2d');
-    const myChart = new Chart(ctx, {
+    const saleReportsChartCanvas = document.getElementById('saleReportsChart').getContext('2d');
+    const saleReportsGraph = new Chart(saleReportsChartCanvas, {
         type: 'line',
         data: {
             labels: ['Jan', 'Fab', 'March', 'April', 'June', 'July'],
             datasets: [{
                 label: 'Sale Reports    ',
                 data: [12, 19, 3, 5, 2, 3],
-                // backgroundColor: [
-                //     'red',
-                //     'rgba(54, 162, 235, 0.2)',
-                //     'rgba(255, 206, 86, 0.2)',
-                //     'rgba(75, 192, 192, 0.2)',
-                //     'rgba(153, 102, 255, 0.2)',
-                //     'rgba(255, 159, 64, 0.2)'
-                // ],
-                borderColor: [
-                    '#1ab293',
-                    'red','red','red','red','red'
-                    // 'rgba(54, 162, 235, 1)',
-                    // 'rgba(255, 206, 86, 1)',
-                    // 'rgba(75, 192, 192, 1)',
-                    // 'rgba(153, 102, 255, 1)',
-                    // 'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 2
+                borderColor: '#1ab293ab',
+                backgroundColor: '#ff000073',
+                borderWidth: 1,
             }]
         },
         options: {
             scales: {
                 y: {
-                    beginAtZero: true
+                    beginAtZero: true,
+                    grid: {
+                        display: false
+                    }
+                },
+                x: {
+                    grid: {
+                        display: false
+                    }
                 }
             }
         }
     });
 
     //  doneut graph 
-    
-    const ctx = document.getElementById('saleReportsChart').getContext('2d');
-    const myChart = new Chart(ctx, {
-        type: 'line',
+    const earningSaleChartCanvas = document.getElementById('earningSaleChart').getContext('2d');
+    const earningSaleGraph = new Chart(earningSaleChartCanvas, {
+        type: 'doughnut',
         data: {
-            labels: ['Jan', 'Fab', 'March', 'April', 'June', 'July'],
+            labels: ['Income', 'Text', 'Fees'],
             datasets: [{
                 label: 'Sale Reports    ',
-                data: [12, 19, 3, 5, 2, 3],
-                // backgroundColor: [
-                //     'red',
-                //     'rgba(54, 162, 235, 0.2)',
-                //     'rgba(255, 206, 86, 0.2)',
-                //     'rgba(75, 192, 192, 0.2)',
-                //     'rgba(153, 102, 255, 0.2)',
-                //     'rgba(255, 159, 64, 0.2)'
-                // ],
-                borderColor: [
-                    '#1ab293',
-                    'red','red','red','red','red'
-                    // 'rgba(54, 162, 235, 1)',
-                    // 'rgba(255, 206, 86, 1)',
-                    // 'rgba(75, 192, 192, 1)',
-                    // 'rgba(153, 102, 255, 1)',
-                    // 'rgba(255, 159, 64, 1)'
+                data: [12, 19, 3],
+                backgroundColor: [
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
                 ],
-                borderWidth: 2
-            }]
+                borderColor: [
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1,
+                borderAlign: 'cenetr',
+                weight: 1,
+                hoverOffset: 5,
+            }],
         },
         options: {
             scales: {
                 y: {
-                    beginAtZero: true
+                    beginAtZero: true,
+                    grid: {
+                        display: false
+                    }
+                },
+                x: {
+                    grid: {
+                        display: false
+                    }
                 }
             }
         }

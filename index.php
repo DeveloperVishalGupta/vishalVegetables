@@ -35,7 +35,7 @@
 		<div class="col-md-12 position-relative imgcontainer">
 			<img src="./images/slider1-img1.png" class=" imageslide position-absolute s1i1" alt="">
 			<img src="./images/slider1-img2.png" class=" imageslide position-absolute s1i2" alt="">
-			<img src="./images/slider1-img3.png" class="imageslide position-absolute s1i3 animate__animated animate__fadeInDown" alt="">
+			<img src="./images/banners/bannerimage.png" class="imageslide position-absolute s1i3 animate__animated animate__fadeInDown" alt="">
 			<img src="./images/slider1-img4.png" class="imageslide position-absolute s1i4 animate__animated animate__fadeInLeft" alt="">
 		</div>
 	</div>

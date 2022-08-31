@@ -41,3 +41,15 @@
  color: var(--BlackColor);
  font-weight: var(--midiumFontWeight);
 }
+
+
+@media only screen and (min-width: 600px) {
+    .adminMenu{
+        height: 100vh;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .menus{
+        margin-bottom: 12rem !important;
+    }
+  }
