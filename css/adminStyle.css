@@ -7,10 +7,13 @@
     --midiumFontWeight :500;
     --textLightGray: rgb(163, 160, 160);
     --robotoFont: 'Roboto', sans-serif;
-    --box-shadow: 0px 0px 6px lightgray;
+    --boxShadow: 0px 0px 6px lightgray;
 }
 *{
     font-family: var(--robotoFont);
+}
+.boxShadow{
+    box-shadow: var(--boxShadow);
 }
 
 /* CSS for all  */
