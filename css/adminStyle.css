@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
 :root{
     --greenTheme: #1ab293;
     --LightgreenTheme: #c1f8ed;
@@ -5,10 +6,15 @@
     --backColor:#000;
     --midiumFontWeight :500;
     --textLightGray: rgb(163, 160, 160);
+    --robotoFont: 'Roboto', sans-serif;
+    --box-shadow: 0px 0px 6px lightgray;
+}
+*{
+    font-family: var(--robotoFont);
 }
 
 /* CSS for all  */
-
+.box-shadow
 .form-control:focus,
 .btn:focus {
     outline: none;
