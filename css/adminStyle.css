@@ -17,12 +17,19 @@
 }
 
 /* CSS for all  */
-.box-shadow
+
 .form-control:focus,
 .btn:focus {
     outline: none;
     box-shadow: none !important;
     /* border: black; */
+}
+a:hover{
+    text-decoration: none !important;
+    color: #000 !important;
+}
+a{
+    color: #000 !important; 
 }
 .row{
     margin: 0 !important;
