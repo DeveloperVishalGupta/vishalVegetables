@@ -1,3 +1,6 @@
+<?
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,11 +38,35 @@
 </head>
 
 <body class="bg-light">
-    <!-- <div class="row">
-        <div class="col-lg-2 col-md-3 col-12">
 
-        </div>
-    </div> -->
+    <?php
+        include 'dbconnection.php';
+        if (isset($_POST['submit']) && !empty($_POST['submit'])) {
+            // print_r($_POST);exit();
+            $ProductName = mysqli_real_escape_string($connection, $_POST['ProductName']);
+            $productImage = mysqli_real_escape_string($connection, $_POST['ProductImage']);
+            $productCategory = mysqli_real_escape_string($connection, $_POST['ProductCategry']);
+            $ProductWeight = mysqli_real_escape_string($connection, $_POST['Productweight']);
+            $ProductQuantity = mysqli_real_escape_string($connection, $_POST['ProductQuantity']);
+            $ProductPrice = mysqli_real_escape_string($connection, $_POST['ProductPrice']);
+            
+            if ($productCategory == 'Vegetables') {
+                $ProductInsertQuery = "INSERT INTO vegetablesproducts (productName, productImage, productCategory, productWeight, productQuantity, productPrice) VALUES ('$ProductName','$productImage','$productCategory','$ProductWeight','$ProductQuantity','$ProductPrice')";
+                $InsertToDB = mysqli_query($connection, $ProductInsertQuery);
+                
+            }elseif($productCategory == 'Fruits'){
+                $ProductInsertQuery = "INSERT INTO fruitsproducts (productName, productImage, productCategory, productWeight, productQuantity, productPrice) VALUES ('$ProductName','$productImage','$productCategory','$ProductWeight','$ProductQuantity','$ProductPrice')";
+                $InsertToDB = mysqli_query($connection, $ProductInsertQuery);
+            }else{
+                $ProductInsertQuery = "INSERT INTO herbsproducts (productName, productImage, productCategery, productWeight, productQuantity, productPrice) VALUES ('$ProductName','$productImage','$productCategory','$ProductWeight','$ProductQuantity','$ProductPrice')";
+                $InsertToDB = mysqli_query($connection, $ProductInsertQuery);
+            }
+            empty($ProductName);
+            header('Location: http://localhost/vishalVegetables/admin/dashboard.php',TRUE, 301);
+            exit();
+        }
+    ?>
+
     <div class="mx-0 row">
         <div class="col-12 col-lg-2 col-md-3 pl-2 pr-0">
             <section class="MenuSection adminMenu bg-white my-1 pt-2 rounded" style="box-shadow: 0px 0px 6px #9d9d9d;">
@@ -279,11 +306,12 @@
                         <div class="boxShadow">
                             <div class="modal-dialog">
                                 <div class="modal-content">
-                                    <div class="modal-header" style="background: #0000000f;">
-                                        <h5 class="modal-title" id="exampleModalLabel">Add Product</h5>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form action="" method="POST">
+                                    <form action="" method="POST">
+                                        <div class="modal-header" style="background: #0000000f;">
+                                            <h5 class="modal-title" id="exampleModalLabel">Add Product</h5>
+                                        </div>
+                                        <div class="modal-body">
+
                                             <label for="ProductName" class="font-weight-bold w-100">name
                                                 <input type="text" require style="font-weight: 500;" name="ProductName" id="ProductName" class="form-control text-capitalize">
                                             </label>
@@ -294,7 +322,7 @@
 
                                             <label for="ProductCategryLabel" class="font-weight-bold w-100">Categry
                                                 <select name="ProductCategry" required id="ProductCategry" class="form-control">
-                                                    <option value="" >Select Product Categry</option>
+                                                    <option value="">Select Product Categry</option>
                                                     <option value="Vegetables">Vegetables</option>
                                                     <option value="Fruits">Fruits</option>
                                                     <option value="Herbs">Herbs</option>
@@ -303,12 +331,12 @@
                                             <div class="row">
                                                 <div class="col-6 pr-1 px-0">
                                                     <label for="Productweight" class="font-weight-bold w-100"> Product Weight
-                                                        <input type="text" name="Productweight" id="Productweight" class="form-control" style="/* width: 45%; */">
+                                                        <input type="text" name="Productweight" id="Productweight" class="form-control">
                                                     </label>
                                                 </div>
                                                 <div class="col-6 pl-1 px-0">
                                                     <label for="Productweight" class="font-weight-bold w-100"> Product Quantity
-                                                        <input type="Number" name="ProductQuantity" id="ProductQuantity" class="form-control" style="/* width: 45%; */">
+                                                        <input type="Number" name="ProductQuantity" id="ProductQuantity" class="form-control">
                                                     </label>
                                                 </div>
                                             </div>
@@ -317,11 +345,11 @@
                                                 <input type="text" required name="ProductPrice" id="FruitsProductPrice" class="w-100 form-control">
                                             </label>
 
-                                    </div>
-                                    <div class="modal-footer" style="background: #0000000f;">
-                                        <button type="button" class="btn btn-danger text-light btn-sm " data-dismiss="modal">Discard</button>
-                                        <button type="submit" name="submit" class="btn btn-sm AddProductBtn">Add Product</button>
-                                    </div>
+                                        </div>
+                                        <div class="modal-footer" style="background: #0000000f;">
+                                            <button type="button" class="btn btn-danger text-light btn-sm " data-dismiss="modal">Discard</button>
+                                            <button type="submit" name="submit" value="submit" class="btn btn-sm AddProductBtn">Add Product</button>
+                                        </div>
                                     </form>
                                 </div>
                             </div>
@@ -338,6 +366,7 @@
         </div>
     </div>
 </body>
+<script src="../js/adminJs.js"></script>
 <script src="../node_modules/chart.js/dist/chart.js"></script>
 <script src="../js/adminJs.js"></script>
 <script>
@@ -414,5 +443,4 @@
         }
     });
 </script>
-
 </html>
