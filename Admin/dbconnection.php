@@ -9,12 +9,12 @@
     if ($connection) {
         ?>
        <script>
-            alert("connection Succesfull");
+            // alert("connection Succesfull");
         </script>
        <?php
     }else{
         ?> <script>
-            alert("connection not Succesfull");
+            // alert("connection not Succesfull");
 
  </script>
       <?php

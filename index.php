@@ -1,6 +1,4 @@
-<?php
-	session_start()
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <style>
@@ -23,9 +21,23 @@
 </style>
 
 <body>
+	<?php
+		include "../vishalVegetables/Admin/dbconnection.php";
+		$SelectQuery = "select * from vishalvegetables";
+		$Query= mysqli_query($connection, $SelectQuery);
+		// $VegeResult = mysqli_fetch_array( $Query );
+		// printf($Query);
+		var_dump($Query)
+
+	?>
+
 
 	<!-- header  -->
-	<?php include_once("header.php") ?>
+	<?php
+		
+	 include_once("header.php") ;
+	 
+	 ?>
 	<!-- // header  -->
 
 </body>
