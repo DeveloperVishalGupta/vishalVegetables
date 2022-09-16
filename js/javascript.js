@@ -105,22 +105,23 @@ for (let i of  herbsCarousel) {
     $("#owl_carousel_hearbs").append(carouselProduct);
 }
 function product_carousel(image, productName, mrp, weight){
-    let productList = `<div class="item p-2">
-    <div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="border">
-        <img src="${image}" alt="" class="mx-auto" style=" border-radius: 9px; width:175px;">
-        <div class="d-flex">
-            <h4 class="h5 pl-3 pr-2">${productName}</h4>
-            <p class="green_color mb-1 weight text-muted">(  ${weight} ) </p>
+//     let productList1 = `
+//     <div class="item p-2">
+//     <div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="border">
+//         <img src="${image}" alt="" class="mx-auto" style=" border-radius: 9px; width:175px;">
+//         <div class="d-flex">
+//             <h4 class="h5 pl-3 pr-2">${productName}</h4>
+//             <p class="green_color mb-1 weight text-muted">(  ${weight} ) </p>
 
-        </div>
-        <div class="align-items-center d-flex justify-content-between px-4 mb-2">
-            <div class="">
-                <h5 class="Price"><span class=""><span class="green_color"><i class="fa-indian-rupee-sign fa-solid mr-1"></i>${mrp}</span></span></h5>
-            </div>
-            <button class="border-secondary btn btn-sm green_bgcolor px-4 text-light" type="button" style="letter-spacing: 1px;">Add</button>
-        </div>
-    </div>
-</div>`;
+//         </div>
+//         <div class="align-items-center d-flex justify-content-between px-4 mb-2">
+//             <div class="">
+//                 <h5 class="Price"><span class=""><span class="green_color"><i class="fa-indian-rupee-sign fa-solid mr-1"></i>${mrp}</span></span></h5>
+//             </div>
+//             <button class="border-secondary btn btn-sm green_bgcolor px-4 text-light" type="button" style="letter-spacing: 1px;">Add</button>
+//         </div>
+//     </div>
+// </div>`;
 return productList;
 }
 

@@ -3,41 +3,50 @@
 
 <style>
 	.box_shadow_with_padding .owl-carousel button .next-slide {
-    top: -14% !important;
-    right: 0% !important;
-}
-.box_shadow_with_padding .owl-carousel button .prev-slide {
-    top: -14% !important;
-    right: 11% !important;
-}
-	    .owl-carousel button .next-slide {
-    top: -31% !important;
-    right: 1% !important;
-}
-.owl-carousel button .prev-slide {
-    top: -31% !important;
-    right: 6% !important;
-}
+		top: -14% !important;
+		right: 0% !important;
+	}
+
+	.box_shadow_with_padding .owl-carousel button .prev-slide {
+		top: -14% !important;
+		right: 11% !important;
+	}
+
+	.owl-carousel button .next-slide {
+		top: -31% !important;
+		right: 1% !important;
+	}
+
+	.owl-carousel button .prev-slide {
+		top: -31% !important;
+		right: 6% !important;
+	}
 </style>
 
 <body>
 	<?php
-		include "../vishalVegetables/Admin/dbconnection.php";
-		$SelectQuery = "select * from vishalvegetables";
-		$Query= mysqli_query($connection, $SelectQuery);
-		// $VegeResult = mysqli_fetch_array( $Query );
-		// printf($Query);
-		var_dump($Query)
+	include "../vishalVegetables/Admin/dbconnection.php";
+	// For Vegetables 
+	$VegesTable = "SELECT * FROM vegetablesproducts	";
+	$QueryForVeges = mysqli_query($connection, $VegesTable);
 
+	// for fruits 
+	$fruitsTabel = "SELECT * FROM fruitsproducts";
+	$QueryForFruits = mysqli_query($connection, $fruitsTabel);
+
+	// for Hearbs 
+	$herbsTabel = "SELECT * FROM herbsproducts";
+	$QueryForHerbs = mysqli_query($connection, $herbsTabel);
+	// var_dump($fruitsData);
 	?>
 
 
 	<!-- header  -->
 	<?php
-		
-	 include_once("header.php") ;
-	 
-	 ?>
+
+	include_once("header.php");
+
+	?>
 	<!-- // header  -->
 
 </body>
@@ -92,45 +101,84 @@
 			<h3 class="selectedCategry">Vegetables <a href="./vegetables.php" class="small" style="color: #797979c7;">( View All )</a></h3>
 		</div>
 	</div>
-	
-	<div class="owl-carousel owl-theme my-4 productCarousel" id="owl_carousel_vegetables"></div>
+
+	<div class="owl-carousel owl-theme my-4 productCarousel" id="owl_carousel_vegetables">
+		<?php while ($vegetablesData = $QueryForVeges->fetch_assoc()) {	?>
+			<div class="item p-2">
+				<div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="border">
+					<img src="./images/vegetables/royalityFree/<?php echo $vegetablesData['productImage'] ?>" alt="" class="mx-auto" style=" border-radius: 9px; width:175px;">
+					<div class="d-flex">
+						<h4 class="h5 pl-3 pr-2"><?php echo $vegetablesData['productName'] ?></h4>
+						<p class="green_color mb-1 weight text-muted">( <?php echo $vegetablesData['productWeight'] ?> ) </p>
+					</div>
+					<div class="align-items-center d-flex justify-content-between px-4 mb-2">
+						<div class="">
+							<h5 class="Price"><span class=""><span class="green_color"><i class="fa-indian-rupee-sign fa-solid mr-1"></i><?php echo $vegetablesData['productPrice'] ?></span></span></h5>
+						</div>
+						<button class="border-secondary btn btn-sm green_bgcolor px-4 text-light" type="button" style="letter-spacing: 1px;">Add</button>
+					</div>
+				</div>
+			</div>
+		<?php
+		}
+		?>
+
+	</div>
 </div>
 <div class="container-fluid mb-5">
-<div class="mb-3 pb-2 pt-3 mt-3 px-3 row" style="background-color: #f7f7f7;">
+	<div class="mb-3 pb-2 pt-3 mt-3 px-3 row" style="background-color: #f7f7f7;">
 		<div class="col-md-12 " style="line-height: 50px;">
 			<h3 class="selectedCategry">Fruits <a href="./vegetables.php" class="small" style="color: #797979c7;">( View All )</a></h3>
 		</div>
 	</div>
-	
-	<div class="owl-carousel owl-theme my-4 productCarousel" id="owl_carousel_fruits"> </div>
+
+	<div class="owl-carousel owl-theme my-4 productCarousel" id="owl_carousel_fruits">
+		<?php while ($fruitsData = $QueryForFruits->fetch_assoc()) { ?>
+			<div class="item p-2">
+				<div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="border">
+					<img src="./images/fruits/royalityFree/<?php echo $fruitsData['productImage'] ?>" alt="" class="mx-auto" style=" border-radius: 9px; width:175px;">
+					<div class="d-flex">
+						<h4 class="h5 pl-3 pr-2"><?php echo $fruitsData['productName'] ?></h4>
+						<p class="green_color mb-1 weight text-muted">( <?php echo $fruitsData['productWeight'] ?> ) </p>
+
+					</div>
+					<div class="align-items-center d-flex justify-content-between px-4 mb-2">
+						<div class="">
+							<h5 class="Price"><span class=""><span class="green_color"><i class="fa-indian-rupee-sign fa-solid mr-1"></i><?php echo $fruitsData['productPrice'] ?></span></span></h5>
+						</div>
+						<button class="border-secondary btn btn-sm green_bgcolor px-4 text-light" type="button" style="letter-spacing: 1px;">Add</button>
+					</div>
+				</div>
+			</div>
+		<?php } ?>
+	</div>
 </div>
 <div class="container-fluid mb-5">
-<div class="mb-3 pb-2 pt-3 mt-3 px-3 row" style="background-color: #f7f7f7;">
+	<div class="mb-3 pb-2 pt-3 mt-3 px-3 row" style="background-color: #f7f7f7;">
 		<div class="col-md-12 " style="line-height: 50px;">
 			<h3 class="selectedCategry">Herbs <a href="./vegetables.php" class="small" style="color: #797979c7;">( View All )</a></h3>
 		</div>
 	</div>
-	
-	<div class="owl-carousel owl-theme my-4 productCarousel" id="owl_carousel_hearbs">
-		<!-- 
-		<div class="item p-2">
-			<div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="border">
-				<img src="./images/cat-img4.jpg" alt="" width="300px" style=" border-radius: 9px;">
-				<div class="d-flex">
-					<h4 class="h5 pl-3 pr-2">Watermelon</h4>
-					<p class="green_color mb-1 weight text-muted">( 500 gm ) </p>
 
-				</div>
-				<div class="align-items-center d-flex justify-content-between px-4">
-					<div class="">
-						<h5 class="Price"><span class=""><span class="green_color"><i
-										class="fa-indian-rupee-sign fa-solid mr-1"></i>100</span></span></h5>
+	<div class="owl-carousel owl-theme my-4 productCarousel" id="owl_carousel_hearbs">
+		<?php while ($herbsData = $QueryForHerbs->fetch_assoc()) {?>
+			<div class="item p-2">
+				<div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="border">
+					<img src="./images/hearbs/<?php echo $herbsData['productImage'] ?>" alt="" class="mx-auto" style=" border-radius: 9px; width:175px;">
+					<div class="d-flex">
+						<h4 class="h5 pl-3 pr-2"><?php echo $herbsData['productName'] ?></h4>
+						<p class="green_color mb-1 weight text-muted">( <?php echo $herbsData['productWeight'] ?> ) </p>
 					</div>
-					<button class="border-secondary btn btn-sm green_bgcolor px-4 text-light" type="button"
-						style="letter-spacing: 1px;">Add</button>
+					<div class="align-items-center d-flex justify-content-between px-4 mb-2">
+						<div class="">
+							<h5 class="Price"><span class=""><span class="green_color"><i class="fa-indian-rupee-sign fa-solid mr-1"></i><?php echo $herbsData['productPrice'] ?></span></span></h5>
+						</div>
+						<button class="border-secondary btn btn-sm green_bgcolor px-4 text-light" type="button" style="letter-spacing: 1px;">Add</button>
+					</div>
 				</div>
 			</div>
-		</div> -->
+		<?php } ?>
+
 	</div>
 </div>
 
@@ -138,7 +186,7 @@
 <div class="container-fluid mb-5" style="height:450px;">
 	<div class="row">
 		<div class="col-md-6 position-relative">
-		<div class="text-center ">
+			<div class="text-center ">
 				<!-- <img src="./images/mobile_Screenshot_2.png" style="width: 27%;left: 16%; top:3%;max-width: 180px;" class="position-absolute" alt="">
 				<img src="./images/mobile_Screenshot_3.png" style="width: 27%;right: 16%; top:3%;max-width: 180px;" class="position-absolute" alt="">
 				<img src="./images/mobile_Screenshot_1.png" style="width: 27%;left: 37.5%;top: 10%;max-width: 180px;" class="position-absolute" alt=""> -->
