@@ -142,8 +142,8 @@
                             <h6 class="mb-0 ">Statics</h6>
                             <p class="mb-0 mediumFontWeight ml-3 small text-dark"><span class="mr-2"><i class="fa-solid fa-calendar-days"></i></span> Last 30 days</p>
                         </div>
-                        <div class="Order align-items-center border d-flex justify-content-around mt-3 py-3 rounded" style="/* background-color: #aae3e3b5; */box-shadow: 0px 0px 6px #aba8a8;">
-                            <span class="bg-white px-2 py-1 rounded" style=" font-size: larger; "><i class="fa-brands fa-opencart"></i></span>
+                        <div class="Order align-items-center border d-flex justify-content-around mt-3 py-3 rounded" style="box-shadow: 0px 0px 6px #aba8a8;">
+                            <span class="px-2 py-1 rounded" style=" font-size: larger;     background: #b7b7b7c7;"><i class="fa-brands fa-opencart"></i></span>
                             <div class="">
                                 <p class="h5 mb-0 mb-1 text-capitalize text-muted" style=" font-weight: 600;">Orders</p>
                                 <div class="align-items-baseline d-flex">
@@ -152,8 +152,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="Order align-items-center border py-2 d-flex justify-content-around mt-3 rounded" style="background-color: #c0b4f1e0;">
-                            <span class="bg-white px-2 py-1 rounded" style=" font-size: larger; "><i class="fa-brands fa-opencart"></i></span>
+                        <div class="Order align-items-center border d-flex justify-content-around mt-3 py-3 rounded" style="box-shadow: 0px 0px 6px #aba8a8;">
+                            <span class="px-2 py-1 rounded" style=" font-size: larger;     background: #b7b7b7c7;"><i class="fa-brands fa-opencart"></i></span>
                             <div class="">
                                 <p class="mb-0 text-muted text-capitalize mb-1" style=" font-weight: 600;">revenge</p>
                                 <div class="align-items-baseline d-flex">
@@ -162,8 +162,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="Order align-items-center border py-2 d-flex justify-content-around mt-3 rounded" style="background-color: #f5b2a7f2;">
-                            <span class="bg-white px-2 py-1 rounded" style=" font-size: larger; "><i class="fa-brands fa-opencart"></i></span>
+                        <div class="Order align-items-center border d-flex justify-content-around mt-3 py-3 rounded" style="box-shadow: 0px 0px 6px #aba8a8;">
+                            <span class="px-2 py-1 rounded" style=" font-size: larger;     background: #b7b7b7c7;"><i class="fa-brands fa-opencart"></i></span>
                             <div class="">
                                 <p class="mb-0 text-muted mb-1 text-capitalize" style=" font-weight: 600;">Earning</p>
                                 <div class="align-items-baseline d-flex">
