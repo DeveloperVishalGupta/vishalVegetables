@@ -115,7 +115,13 @@
 						<div class="">
 							<h5 class="Price"><span class=""><span class="green_color"><i class="fa-indian-rupee-sign fa-solid mr-1"></i><?php echo $vegetablesData['productPrice'] ?></span></span></h5>
 						</div>
-						<button class="border-secondary btn btn-sm green_bgcolor px-4 text-light" type="button" style="letter-spacing: 1px;">Add</button>
+						<button class="border-secondary btn btn-sm green_bgcolor px-4 text-light productAddBtn" type="button" style="letter-spacing: 1px;">Add</button>
+						
+						<div class="align-items-center productAddCount" id="" style="display: none;">
+							<button class="border-secondary btn btn-sm green_bgcolor px-1 py-0 text-light" type="button" style="letter-spacing: 1px;"><span><i class="fa-solid fa-minus text-white"></i></span></button>
+							<h6 class="mb-0 px-2">4</h6>
+							<button class="border-secondary btn btn-sm green_bgcolor px-1 py-0" type="button" style="letter-spacing: 1px;"><span><i class="fa-solid fa-plus text-white"></i></span></button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -131,7 +137,6 @@
 			<h3 class="selectedCategry">Fruits <a href="./vegetables.php" class="small" style="color: #797979c7;">( View All )</a></h3>
 		</div>
 	</div>
-
 	<div class="owl-carousel owl-theme my-4 productCarousel" id="owl_carousel_fruits">
 		<?php while ($fruitsData = $QueryForFruits->fetch_assoc()) { ?>
 			<div class="item p-2">
@@ -161,7 +166,7 @@
 	</div>
 
 	<div class="owl-carousel owl-theme my-4 productCarousel" id="owl_carousel_hearbs">
-		<?php while ($herbsData = $QueryForHerbs->fetch_assoc()) {?>
+		<?php while ($herbsData = $QueryForHerbs->fetch_assoc()) { ?>
 			<div class="item p-2">
 				<div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="border">
 					<img src="./images/hearbs/<?php echo $herbsData['productImage'] ?>" alt="" class="mx-auto" style=" border-radius: 9px; width:175px;">
