@@ -234,12 +234,7 @@ function calltoster(title, massage,color) {
 
 let addProductBtn = document.querySelectorAll('.productAddBtn');
 for (let i = 0; i < addProductBtn.length; i++) {
-    let productAddCount = document.querySelectorAll('.productAddCount');
-    for (let j = 0; j < productAddCount.length; j++) {
-       
-        addProductBtn[i].addEventListener('click',productAdded.bind(this,addProductBtn[i] ) )
-    }
-   
+    addProductBtn[i].addEventListener('click',productAdded.bind(this,addProductBtn[i] ) )  
 }
 
 
@@ -247,11 +242,7 @@ for (let i = 0; i < addProductBtn.length; i++) {
 
 function productAdded(thisAddKey, selectedProduct){
     $(thisAddKey).hide();
-    $(".productAddCount").toggleClass('d-flex');
-    console.log(thisAddKey);
-    console.log(selectedProduct);
-    // $(thisProduct).addClass('d-none');
+    let productAddCount = document.querySelectorAll('.productAddCount');
+    
+
 };
-console.log(addProductBtn);
-
-
