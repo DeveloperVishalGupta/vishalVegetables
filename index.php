@@ -106,7 +106,8 @@
 		<?php while ($vegetablesData = $QueryForVeges->fetch_assoc()) {	?>
 			<div class="item p-2">
 				<div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="border">
-					<img src="./images/vegetables/royalityFree/<?php echo $vegetablesData['productImage'] ?>" alt="" class="mx-auto" style=" border-radius: 9px; width:175px;">
+
+					<img src="./tempImg/vegetables/<?php echo $vegetablesData['productImage'] ?>" alt="" class="mx-auto" style=" border-radius: 9px; width:175px; height: 135px;">
 					<div class="d-flex">
 						<h4 class="h5 pl-3 pr-2"><?php echo $vegetablesData['productName'] ?></h4>
 						<p class="green_color mb-1 weight text-muted">( <?php echo $vegetablesData['productWeight'] ?> ) </p>
@@ -141,7 +142,7 @@
 		<?php while ($fruitsData = $QueryForFruits->fetch_assoc()) { ?>
 			<div class="item p-2">
 				<div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="border">
-					<img src="./images/fruits/royalityFree/<?php echo $fruitsData['productImage'] ?>" alt="" class="mx-auto" style=" border-radius: 9px; width:175px;">
+					<img src="./tempImg/fruits/<?php echo $fruitsData['productImage'] ?>" alt="" class="mx-auto" style=" border-radius: 9px; width:175px; height: 135px;">
 					<div class="d-flex">
 						<h4 class="h5 pl-3 pr-2"><?php echo $fruitsData['productName'] ?></h4>
 						<p class="green_color mb-1 weight text-muted">( <?php echo $fruitsData['productWeight'] ?> ) </p>
@@ -169,7 +170,7 @@
 		<?php while ($herbsData = $QueryForHerbs->fetch_assoc()) { ?>
 			<div class="item p-2">
 				<div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="border">
-					<img src="./images/hearbs/<?php echo $herbsData['productImage'] ?>" alt="" class="mx-auto" style=" border-radius: 9px; width:175px;">
+					<img src="./tempImg/hearbs/<?php echo $herbsData['productImage'] ?>" alt="" class="mx-auto" style=" border-radius: 9px; width:175px; height: 135px;">
 					<div class="d-flex">
 						<h4 class="h5 pl-3 pr-2"><?php echo $herbsData['productName'] ?></h4>
 						<p class="green_color mb-1 weight text-muted">( <?php echo $herbsData['productWeight'] ?> ) </p>

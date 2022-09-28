@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 16, 2022 at 02:31 PM
+-- Generation Time: Sep 28, 2022 at 03:23 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.28
 
@@ -59,7 +59,14 @@ CREATE TABLE `fruitsproducts` (
 INSERT INTO `fruitsproducts` (`productId`, `productName`, `productImage`, `productCategory`, `productWeight`, `productQuantity`, `productPrice`) VALUES
 (1, 'Banana', 'Banana.jpg', 'Fruits', '500gm', 6, '35'),
 (2, 'Apple', 'apple.jpg', 'Fruits', '1kg', 10, '140'),
-(3, 'Pineapple', 'pineapple.jpg', 'Fruits', '1N', 10, '80');
+(3, 'Pineapple', 'pineapple.jpg', 'Fruits', '1N', 10, '80'),
+(4, 'Black Berry', 'blackberry.jpg', 'Fruits', '500gm', 12, '250'),
+(5, 'Black Greaps', 'blackGreaps.jpg', 'Fruits', '500gm', 10, '100'),
+(6, 'Blueberry', 'blueberry.webp', 'Fruits', '500gm', 10, '200'),
+(7, 'Fragon-Fruit', 'dragon-fruit.jpg', 'Fruits', '10N', 10, '100'),
+(8, 'Greaps', 'greaps.jpg', 'Fruits', '500gm', 10, '80'),
+(9, 'JAckFruits', 'jackfruits.jpg', 'Fruits', '500gm', 10, '15'),
+(10, 'Jamun', 'jamun.webp', 'Fruits', '500gm', 10, '50');
 
 -- --------------------------------------------------------
 
@@ -83,7 +90,18 @@ CREATE TABLE `herbsproducts` (
 
 INSERT INTO `herbsproducts` (`productName`, `productImage`, `productCategery`, `productWeight`, `productQuantity`, `productPrice`, `productId`) VALUES
 ('Lemon', 'lemon.jpg', 'Herbs', '3N', 20, '20', 1),
-('Ginger', 'Ginger.jpg', 'Herbs', '250gm', 10, '25', 2);
+('Ginger', 'Ginger.jpg', 'Herbs', '250gm', 10, '25', 2),
+('chauli', 'chauli.jfif', 'Herbs', '10', 10, '20', 3),
+('dhaniya', 'dhaniya.jpg', 'Herbs', '10', 10, '50', 4),
+('haramath', 'haramath.webp', 'Herbs', '10', 10, '20', 5),
+('lalmath', 'lalmath.jpeg', 'Herbs', '10', 10, '20', 6),
+('mayalu', 'mayalu.jpg', 'Herbs', '10', 10, '10', 7),
+('methi', 'methi.jfif', 'Herbs', '10', 10, '10', 8),
+('muli sag', 'muli sag.jpg', 'Herbs', '10', 10, '10', 9),
+('muli', 'muli.jpg', 'Herbs', '10', 10, '10', 10),
+('palak', 'palak.jpg', 'Herbs', '10', 10, '10', 11),
+('Pudina', 'Pudina.jpg', 'Herbs', '10', 101, '10', 12),
+('sarso', 'sarso.jpg', 'Herbs', '10', 10, '10', 13);
 
 -- --------------------------------------------------------
 
@@ -112,7 +130,13 @@ INSERT INTO `vegetablesproducts` (`productId`, `productName`, `productImage`, `p
 (50, 'Cucumber', 'Cucumber.jpg', 'Vegetables', '250gm', 10, '20'),
 (51, 'Onion', 'onions.jpg', 'Vegetables', '1kg', 10, '30'),
 (52, 'Tomato', 'tomatoes.jpg', 'Vegetables', '1kg', 10, '40'),
-(53, 'Carrot', 'carrot.jpg', 'Vegetables', '250gm', 10, '20');
+(53, 'Carrot', 'carrot.jpg', 'Vegetables', '250gm', 10, '20'),
+(54, 'Beetroot', 'beetroot.jpg', 'Vegetables', '500gm', 10, '40'),
+(55, 'lady finger', 'bhindi.jpg', 'Vegetables', '500gm', 5, '50'),
+(56, 'Bitter Gaurd', 'Bitter_gaurd.jpg', 'Vegetables', '500gm', 5, '50'),
+(57, 'Colliflower', 'Cauliflower.jpg', 'Vegetables', '500gm', 5, '50'),
+(58, 'Controla', 'controla.jfif', 'Vegetables', '500gm', 10, '60'),
+(59, 'Sweet Corn', 'makkai.jfif', 'Vegetables', '500gm', 12, '12');
 
 --
 -- Indexes for dumped tables
@@ -156,19 +180,19 @@ ALTER TABLE `cartitems`
 -- AUTO_INCREMENT for table `fruitsproducts`
 --
 ALTER TABLE `fruitsproducts`
-  MODIFY `productId` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `productId` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `herbsproducts`
 --
 ALTER TABLE `herbsproducts`
-  MODIFY `productId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `productId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `vegetablesproducts`
 --
 ALTER TABLE `vegetablesproducts`
-  MODIFY `productId` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `productId` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
