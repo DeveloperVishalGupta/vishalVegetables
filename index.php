@@ -75,10 +75,12 @@
 	<div class="col-md-4  ">
 		<div class="box_shadow_with_padding">
 			<h5>Best Selling Vegetables</h5>
+			<!-- <php while($vegetablesData = $QueryForVeges->fetch_assoc()) {> -->
 			<div class="owl-carousel bestSelling owl-theme mt-4" id="">
 				<div class="item text-center best_Selling_vegetables_1"></div>
-				<div class="item text-center  best_Selling_vegetables_2"></div>
+				<div class="item text-center best_Selling_vegetables_1"></div>
 			</div>
+
 		</div>
 	</div>
 	<!-- best_Selling fruits cart -->
@@ -116,12 +118,13 @@
 						<div class="">
 							<h5 class="Price"><span class=""><span class="green_color"><i class="fa-indian-rupee-sign fa-solid mr-1"></i><?php echo $vegetablesData['productPrice'] ?></span></span></h5>
 						</div>
-						<button class="border-secondary btn btn-sm green_bgcolor px-4 text-light productAddBtn" type="button" style="letter-spacing: 1px;" onclick="addProduct('productAddCount'<?php echo $vegetablesData['productId'] ?>)">Add</button>
-						
-						<div class="align-items-center productAddCount d-flex" id="productAddCount<?php echo $vegetablesData['productId'] ?>"	>
-							<button class="border-secondary btn btn-sm green_bgcolor px-1 py-0 text-light" type="button" style="letter-spacing: 1px;"><span><i class="fa-solid fa-minus text-white"></i></span></button>
-							<h6 class="mb-0 px-2">4</h6>
-							<button class="border-secondary btn btn-sm green_bgcolor px-1 py-0" type="button" style="letter-spacing: 1px;"><span><i class="fa-solid fa-plus text-white"></i></span></button>
+						<button class="border-secondary btn btn-sm green_bgcolor px-4 text-light productAddBtn" id='productAddBtn_<?php echo $vegetablesData['productId'] ?>' type="button" style="letter-spacing: 1px;" onclick="addProduct('productAddBtn_<?php echo $vegetablesData['productId'] ?>', 'productAddCount<?php echo $vegetablesData['productId'] ?>')">Add</button>
+						<!-- 'productAddCount_<?php echo $vegetablesData['productId'] ?> -->
+
+						<div class="align-items-center productAddCount d-none" id="productAddCount<?php echo $vegetablesData['productId'] ?>">
+							<button  onclick="decreaseProduct('ProductNumber_<?php echo $vegetablesData['productId'] ?>','fa-minus_<?php echo $vegetablesData['productId'] ?>')" class="border-secondary btn btn-sm green_bgcolor px-1 py-0 text-light " type="button" style="letter-spacing: 1px;"><span><i class="fa-solid fa-minus text-white" id="fa-minus_<?php echo $vegetablesData['productId'] ?>"></i></span></button>
+							<h6 id="ProductNumber_<?php echo $vegetablesData['productId'] ?>" class="mb-0 text-center" style="width: 30px;">1</h6>
+							<button onclick="increaseProduct('ProductNumber_<?php echo $vegetablesData['productId'] ?>')" class="border-secondary btn btn-sm green_bgcolor px-1 py-0" type="button" style="letter-spacing: 1px;"><span><i class="fa-solid fa-plus text-white"></i></span></button>
 						</div>
 					</div>
 				</div>
@@ -295,9 +298,7 @@
 	});
 
 
-	function addProduct(id){
-		console.log(id);
-	}
+	
 </script>
 
 </html>

@@ -1,6 +1,3 @@
-// index page javascript 
-// besst selling product 
-
 //  for vegetables 
 const bestSellingVegetables = [
     {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli", MRP:"30", sellingPrice:"25"},
@@ -63,47 +60,6 @@ return productList;
 
 }
 
-// for vegetables carousel  
-// const vegetablesCarousel = [
-//     {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli",weight:"500 gm", MRP:"30", sellingPrice:"25"},
-//     {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli",weight:"500 gm", MRP:"30", sellingPrice:"25"},
-//     {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli",weight:"500 gm", MRP:"30", sellingPrice:"25"},
-//     {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli",weight:"500 gm", MRP:"30", sellingPrice:"25"},
-//     {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli",weight:"500 gm", MRP:"30", sellingPrice:"25"},
-//     {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli",weight:"500 gm", MRP:"30", sellingPrice:"25"},
-//     {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli",weight:"500 gm", MRP:"30", sellingPrice:"25"}
-// ];
-// const fruitsCarousel = [
-//     {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli", MRP:"30", sellingPrice:"25"},
-//     {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli", MRP:"30", sellingPrice:"25"},
-//     {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli", MRP:"30", sellingPrice:"25"},
-//     {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli", MRP:"30", sellingPrice:"25"},
-//     {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli", MRP:"30", sellingPrice:"25"},
-//     {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli", MRP:"30", sellingPrice:"25"},
-//     {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli", MRP:"30", sellingPrice:"25"}
-// ];
-// const herbsCarousel = [
-//     {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli", MRP:"30", sellingPrice:"25"},
-//     {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli", MRP:"30", sellingPrice:"25"},
-//     {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli", MRP:"30", sellingPrice:"25"},
-//     {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli", MRP:"30", sellingPrice:"25"},
-//     {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli", MRP:"30", sellingPrice:"25"},
-//     {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli", MRP:"30", sellingPrice:"25"},
-//     {image:"./images/vegetables/cat-img1.jpg", ProductName:"Red Chilli", MRP:"30", sellingPrice:"25"}
-// ];
-// for (let i of  vegetablesCarousel) {
-//     var carouselProduct = product_carousel(i.image, i.ProductName, i.MRP, i.weight);
-//     $("#owl_carousel_vegetables").append(carouselProduct);
-//     $("#suggestionproductCarousel").append(carouselProduct);
-// }
-// for (let i of  fruitsCarousel) {
-//     var carouselProduct = product_carousel(i.image, i.ProductName, i.MRP, i.weight);
-//     $("#owl_carousel_fruits").append(carouselProduct);
-// }
-// for (let i of  herbsCarousel) {
-//     var carouselProduct = product_carousel(i.image, i.ProductName, i.MRP, i.weight);
-//     $("#owl_carousel_hearbs").append(carouselProduct);
-// }
 function product_carousel(image, productName, mrp, weight){
 //     let productList1 = `
 //     <div class="item p-2">
@@ -230,19 +186,29 @@ function calltoster(title, massage,color) {
     });
 }
 
-// addProduct functionality 
-
-let addProductBtn = document.querySelectorAll('.productAddBtn');
-for (let i = 0; i < addProductBtn.length; i++) {
-    addProductBtn[i].addEventListener('click',productAdded.bind(this,addProductBtn[i] ) )  
+function addProduct(btnId, counterId){
+    console.log('#'+counterId);
+    $("#"+btnId).hide();
+    $("#"+ counterId).addClass('d-flex');
 }
 
+let increaseProductCounter = 1;
+function increaseProduct(countValueId){
+    increaseProductCounter++;
+    console.log(countValueId);
+    document.getElementById(countValueId).innerHTML = increaseProductCounter;
+}
 
-
-
-function productAdded(thisAddKey, selectedProduct){
-    $(thisAddKey).hide();
-    let productAddCount = document.querySelectorAll('.productAddCount');
-    
-
-};
+function decreaseProduct(countValueId, minusIconId){
+    if (countValueId == 1) {
+        $("#"+minusIconId).addClass('fa-trash');
+        $("#"+minusIconId).removeClass('fa-minus');
+    }
+    if (increaseProductCounter >= 1) {
+        $("#"+minusIconId).removeClass('fa-trash')
+        $("#"+minusIconId).addClass('fa-minus')
+        increaseProductCounter--;
+        console.log(countValueId);
+        document.getElementById(countValueId).innerHTML = increaseProductCounter;    
+    }
+   }
