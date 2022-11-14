@@ -60,26 +60,7 @@ return productList;
 
 }
 
-function product_carousel(image, productName, mrp, weight){
-//     let productList1 = `
-//     <div class="item p-2">
-//     <div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="border">
-//         <img src="${image}" alt="" class="mx-auto" style=" border-radius: 9px; width:175px;">
-//         <div class="d-flex">
-//             <h4 class="h5 pl-3 pr-2">${productName}</h4>
-//             <p class="green_color mb-1 weight text-muted">(  ${weight} ) </p>
 
-//         </div>
-//         <div class="align-items-center d-flex justify-content-between px-4 mb-2">
-//             <div class="">
-//                 <h5 class="Price"><span class=""><span class="green_color"><i class="fa-indian-rupee-sign fa-solid mr-1"></i>${mrp}</span></span></h5>
-//             </div>
-//             <button class="border-secondary btn btn-sm green_bgcolor px-4 text-light" type="button" style="letter-spacing: 1px;">Add</button>
-//         </div>
-//     </div>
-// </div>`;
-// return productList;
-}
 
 // index page downlode app section 
 
@@ -107,23 +88,23 @@ for (let i of  Vegetables_pageProduct) {
     $("#AllVegetable").append(Vegetables_pageProductdetalis);
 }
 function ViewAllproduct(image, productName, mrp, weight){
-//     let productList = `<div class="col-md-4 col-lg-3 mb-4">
-//     <div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="border pb-2 text-center">
-//         <img src="${image}" alt="" style=" width:250px;" style=" border-radius: 9px;">
-//         <div class="d-flex">
-//             <h4 class="h5 pl-3 pr-2">${productName}</h4>
-//             <p class="green_color mb-1 weight text-muted">(  ${weight} ) </p>
+    let productList = `<div class="col-md-4 col-lg-3 mb-4">
+    <div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="border pb-2 text-center">
+        <img src="${image}" alt="" style=" width:250px;" style=" border-radius: 9px;">
+        <div class="d-flex">
+            <h4 class="h5 pl-3 pr-2">${productName}</h4>
+            <p class="green_color mb-1 weight text-muted">(  ${weight} ) </p>
 
-//         </div>
-//         <div class="align-items-center d-flex justify-content-between px-4">
-//             <div class="">
-//                 <h5 class="Price"><span class=""><span class="green_color"><i class="fa-indian-rupee-sign fa-solid mr-1"></i>${mrp}</span></span></h5>
-//             </div>
-//             <button class="border-secondary btn btn-sm green_bgcolor px-4 text-light" type="button" style="letter-spacing: 1px;">Add</button>
-//         </div>
-//     </div>
-// </div>`;
-// return productList;
+        </div>
+        <div class="align-items-center d-flex justify-content-between px-4">
+            <div class="">
+                <h5 class="Price"><span class=""><span class="green_color"><i class="fa-indian-rupee-sign fa-solid mr-1"></i>${mrp}</span></span></h5>
+            </div>
+            <button class="border-secondary btn btn-sm green_bgcolor px-4 text-light" type="button" style="letter-spacing: 1px;">Add</button>
+        </div>
+    </div>
+</div>`;
+return productList;
 }
  //===================================================== ./  vegetables product details  =====================================================
  //=====================================================  viewproduct details page js  =====================================================
@@ -143,23 +124,23 @@ function ViewAllproduct(image, productName, mrp, weight){
      
     //  productQuentity('1kg', '750 gm', '500 gm', '250 gm')
  }
-//  function productQuentity(qt1,qt2,qt3,qt4) {
-//     var productQuentityList = `<div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="border">
-//     <div class="align-items-center d-flex justify-content-around ">
-//         <img src="./images/2-watermelon.jpg" alt="" class="" style="width: 75px;">
-//         <h5 class="Price">
-//             <span class="">
-//                 <span class="green_color">
-//                     <i class="fa-indian-rupee-sign fa-solid mr-1"></i>
-//                     100</span>
-//             </span>
-//         </h5>
-//         <p class="green_color mb-1 weight text-muted">1 Kg </p>
-//         <input type="radio" class="radio-btn" name="productWeight" id="">
-//     </div>
-// </div>`;
-// $("#ProductQuentity").append(productQuentityList);
-//  }
+ function productQuentity(qt1,qt2,qt3,qt4) {
+    var productQuentityList = `<div style="box-shadow: 2px 2px 5px 1px #c8c8c8;border-radius: 9px;" class="border">
+    <div class="align-items-center d-flex justify-content-around ">
+        <img src="./images/2-watermelon.jpg" alt="" class="" style="width: 75px;">
+        <h5 class="Price">
+            <span class="">
+                <span class="green_color">
+                    <i class="fa-indian-rupee-sign fa-solid mr-1"></i>
+                    100</span>
+            </span>
+        </h5>
+        <p class="green_color mb-1 weight text-muted">1 Kg </p>
+        <input type="radio" class="radio-btn" name="productWeight" id="">
+    </div>
+</div>`;
+$("#ProductQuentity").append(productQuentityList);
+ }
  //===================================================== ./ viewproduct details page js =====================================================
 
  //===================================================== cart details page js =====================================================
@@ -186,29 +167,12 @@ function calltoster(title, massage,color) {
     });
 }
 
-function addProduct(btnId, counterId){
-    console.log('#'+counterId);
-    $("#"+btnId).hide();
-    $("#"+ counterId).addClass('d-flex');
+function addProduct(btnId, counterId, productNumber){
+calltoster('Success','Product <b>Added </b> To cart','green');
+  
 }
 
-let increaseProductCounter = 1;
-function increaseProduct(countValueId){
-    increaseProductCounter++;
-    console.log(countValueId);
-    document.getElementById(countValueId).innerHTML = increaseProductCounter;
-}
+// quantity up and down 
+let QuantityUp = $("")
 
-function decreaseProduct(countValueId, minusIconId){
-    if (countValueId == 1) {
-        $("#"+minusIconId).addClass('fa-trash');
-        $("#"+minusIconId).removeClass('fa-minus');
-    }
-    if (increaseProductCounter >= 1) {
-        $("#"+minusIconId).removeClass('fa-trash')
-        $("#"+minusIconId).addClass('fa-minus')
-        increaseProductCounter--;
-        console.log(countValueId);
-        document.getElementById(countValueId).innerHTML = increaseProductCounter;    
-    }
-   }
+

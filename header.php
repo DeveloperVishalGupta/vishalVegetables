@@ -161,6 +161,7 @@
 </body>
 
 <script src="./node_modules/izitoast/dist/js/iziToast.min.js"></script>
+<script src="./js/addproduct.js"></script>
 <script>
 
 </script>

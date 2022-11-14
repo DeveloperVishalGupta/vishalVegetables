@@ -23,19 +23,6 @@ SET time_zone = "+00:00";
 
 -- --------------------------------------------------------
 
---
--- Table structure for table `cartitems`
---
-
-CREATE TABLE `cartitems` (
-  `ProductImage` varchar(255) NOT NULL,
-  `ProductName` varchar(255) NOT NULL,
-  `ProductWeight` varchar(255) NOT NULL,
-  `ProductPrice` int(255) NOT NULL,
-  `ProductQuantity` int(255) NOT NULL,
-  `ProductId` int(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
 -- --------------------------------------------------------
 
 --
@@ -142,11 +129,6 @@ INSERT INTO `vegetablesproducts` (`productId`, `productName`, `productImage`, `p
 -- Indexes for dumped tables
 --
 
---
--- Indexes for table `cartitems`
---
-ALTER TABLE `cartitems`
-  ADD PRIMARY KEY (`ProductId`);
 
 --
 -- Indexes for table `fruitsproducts`
@@ -171,12 +153,6 @@ ALTER TABLE `vegetablesproducts`
 --
 
 --
--- AUTO_INCREMENT for table `cartitems`
---
-ALTER TABLE `cartitems`
-  MODIFY `ProductId` int(255) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `fruitsproducts`
 --
 ALTER TABLE `fruitsproducts`
@@ -194,7 +170,3 @@ ALTER TABLE `herbsproducts`
 ALTER TABLE `vegetablesproducts`
   MODIFY `productId` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
